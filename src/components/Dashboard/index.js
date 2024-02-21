@@ -1,10 +1,10 @@
 import React from 'react'
 import { Box, Typography, Button } from "@mui/material"
 import Navbar from '../Navbar'
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+// import FacebookIcon from '@mui/icons-material/Facebook';
+// import TwitterIcon from '@mui/icons-material/Twitter';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import About from '../About';
 import Skills from '../Skills';
 
@@ -22,12 +22,12 @@ const Dashboard = () => {
                     </Box>
                     <Box className=" !absolute !right-0 !-top-0 !flex !flex-col lg:!mt-36">
                         <Box className="!border-2 !border-[--gold-400] !w-24 !rotate-90"></Box>
-                        <Box className="!flex !flex-col !pt-20 !pl-9 !gap-2">
+                        {/* <Box className="!flex !flex-col !pt-20 !pl-9 !gap-2">
                             <FacebookIcon className='!text-[--title-color]' />
                             <TwitterIcon className='!text-[--title-color]' />
                             <LinkedInIcon className='!text-[--title-color]' />
                             <WhatsAppIcon className='!text-[--title-color]' />
-                        </Box>
+                        </Box> */}
                     </Box>
                 </Box>
             </Box>

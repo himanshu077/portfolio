@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, InputBase, InputAdornment } from '@mui/material';
 import Logo from "../../assets/Logo.png";
-import SearchIcon from '@mui/icons-material/Search';
+// import SearchIcon from '@mui/icons-material/Search';
 
 const Navbar = () => {
     return (
@@ -17,11 +17,11 @@ const Navbar = () => {
                     <InputBase
                         placeholder='Search'
                         className='!bg-[--search-bg-color] !py-1 !shadow-[--search-shadow] !shadow-lg !rounded-xl !pl-3 !text-stone-100 !w-44'
-                        endAdornment={
-                            <InputAdornment position="start">
-                                <SearchIcon className='!text-lg' />
-                            </InputAdornment>
-                        }
+                        // endAdornment={
+                        //     <InputAdornment position="start">
+                        //         <SearchIcon className='!text-lg' />
+                        //     </InputAdornment>
+                        // }
                     />
                 </Box>
             </Box>
