@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Typography, InputBase, InputAdornment } from '@mui/material';
 import Logo from "../../assets/Logo.png";
-// import SearchIcon from '@mui/icons-material/Search';
 
 const Navbar = () => {
     return (
