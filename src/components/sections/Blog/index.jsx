@@ -1,9 +1,14 @@
 import React from 'react'
 import Container from '../../ui/container'
+import { cn, formatDateWithDay } from '../../../lib/utils'
+import { Caption } from '../../ui/typography'
+import SanityImage from '../../ui/sanity-image'
+import { blogPosts } from './Data'
 
 const Blog = () => {
     return (
         <section
+            id="blog"
             aria-labelledby="blog-heading"
             className={cn(
                 'relative z-10 w-full bg-neutrals-900 py-32 flex flex-col items-center justify-center min-h-screen',
@@ -17,11 +22,10 @@ const Blog = () => {
                     >
                         <Caption id="blog-heading">Blog</Caption>
                         <h1 className="mb-4 text-balance text-3xl/tight font-bold text-neutrals-50 md:text-5xl/tight">
-                            Join our creative voyage
+                            Lorem ipsum dolor sit amet, consectetur
                         </h1>
                         <p className="mb-11 max-w-prose text-base/relaxed text-neutrals-300 lg:mb-14">
-                            Ride along for the <span className="text-neutrals-100">latest updates</span> and an exclusive look
-                            at what&apos;s brewing at LOKKEE STUDIOS lab.
+                            Lorem ipsum dolor <span className="text-neutrals-100">Lorem ipsum</span> Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit
                         </p>
                     </div>
                     <div
@@ -34,11 +38,11 @@ const Blog = () => {
                         <div className="flex flex-col gap-y-12">
                             {
                                 blogPosts.map((blogPost, i) => (
-                                    <article className="relative">
+                                    <article className="!relative">
                                         <a
                                             href={`/blog/${blogPost.slug.current}`}
                                             aria-label={`Show ${blogPost.title} blog post`}
-                                            className="group flex items-center"
+                                            className="!group !flex !items-center"
                                         >
                                             <div
                                                 className={cn(
@@ -52,7 +56,8 @@ const Blog = () => {
                                             <div className="relative">
                                                 <div className="mb-8 mt-10 w-full overflow-hidden rounded-md border-0.5 border-neutrals-50/40 lg:mt-0">
                                                     <SanityImage
-                                                        image={blogPost.poster}
+                                                        src={blogPost.poster}
+                                                        alt="Lorem"
                                                         maxWidth={1024}
                                                         className="w-full"
                                                     />
@@ -65,7 +70,7 @@ const Blog = () => {
                                                 </p>
                                                 <p className="pointer-events-none absolute top-0 h-full max-lg:start-0 lg:end-full lg:me-[calc(6.5rem+1px)]">
                                                     <time
-                                                        datetime="2023-08-07T10:30:00.000Z"
+                                                        dateTime="2023-08-07T10:30:00.000Z"
                                                         className="pointer-events-auto whitespace-nowrap text-sm/none text-neutrals-300 lg:sticky lg:top-24"
                                                     >
                                                         {formatDateWithDay(blogPost.date)}

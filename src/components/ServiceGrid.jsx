@@ -25,34 +25,34 @@ function ServiceGrid() {
           <ServiceCard.Title>Web application</ServiceCard.Title>
           <ServiceCard.Price>Individual price</ServiceCard.Price>
           <ServiceCard.Description>
-            Whether you want a web app, paired with a marketing website, or a cross-platform app, I
-            got you covered.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in purus mollis,
+            gravida dui imperdiet, tincidunt augue.
             <br />
-            Let&apos;s get together and discuss a high quality quote based on the scale of your
+            Let&apos;s dolor sit amet, consectetur adipiscing elit. Vestibulum in purus mollis,
             vision!
           </ServiceCard.Description>
           <ServiceCard.List>
             <ServiceCard.List.BenefitListItem>
-              Unique, modern, customized design
+              Lorem, ispum, dolor sit amet
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Responsive, accessible development
+              Vestibulum, Aliquam luctus
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Optimized performance
+              posuere vestibulum
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Animations & interactions
+              Etiam pulvinar eget
             </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>Intuitive user flow</ServiceCard.List.BenefitListItem>
+            <ServiceCard.List.BenefitListItem>porta dui commodo interdum.</ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Adaptive, scalable backend solutions
+              Lorem ipsum dolor sit amet, consectetur
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Catch-up meetings & close communication
+              Lorem ipsum dolor sit amet, consectetur adipiscing
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.AddonListItem>
-              Multi-platform support <span className="text-neutrals-400">|</span> Individual price
+              Lorem ipsum dolor sit amet, <span className="text-neutrals-400">|</span> consectetur adipiscing
             </ServiceCard.List.AddonListItem>
           </ServiceCard.List>
         </div>
@@ -66,46 +66,46 @@ function ServiceGrid() {
         <div>
           <ServiceCard.Title>Website</ServiceCard.Title>
           <ServiceCard.Price>
-            €1.800<span className="text-xl font-normal">*</span>
+            $ 1800<span className="text-xl font-normal">*</span>
           </ServiceCard.Price>
           <ServiceCard.Description>
-            There are no limits to your website vision ― Let&apos;s make it happen!
+            consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing ― Let&apos;s make it happen!
           </ServiceCard.Description>
           <ServiceCard.List>
             <ServiceCard.List.BenefitListItem>
-              Unique, modern, customized design
+              Lorem ipsum dolor sit amet, consectetur adipiscing
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Responsive, accessible development
+              Lorem ipsum dolor sit amet, consectetur adipiscing
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Animations & interactions
+              Lorem ipsum dolor sit
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Enduring, memorable user experience
+              Lorem ipsum dolor sit amet, consectetur adipiscing
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              SEO & page speed optimization
+              Lorem ipsum dolor sit amet, consectetur adipiscing
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Catch-up meetings & close communication
+              Lorem ipsum dolor sit amet, consectetur adipiscing
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.AddonListItem>
-              Hosting (including domain) setup <span className="text-neutrals-400">|</span> €400
+              Hosting (lorem ispum dolor) sit <span className="text-neutrals-400">|</span> $400
             </ServiceCard.List.AddonListItem>
             <ServiceCard.List.AddonListItem>
-              CMS implementation <span className="text-neutrals-400">|</span> €1.150
+              consectetur adipiscing  <span className="text-neutrals-400">|</span> $1150
             </ServiceCard.List.AddonListItem>
             <ServiceCard.List.AddonListItem>
-              Multilingual support <span className="text-neutrals-400">|</span> €1.400
+              consectetur adipiscing  <span className="text-neutrals-400">|</span> $1400
             </ServiceCard.List.AddonListItem>
             <ServiceCard.List.AddonListItem>
-              Analytics <span className="text-neutrals-400">|</span> €350
+              consectetur <span className="text-neutrals-400">|</span> $350
             </ServiceCard.List.AddonListItem>
           </ServiceCard.List>
         </div>
         <ServiceCard.Notice>
-          * entry level price, may vary depending on the project scope
+          * eLorem ipsum dolor sit amet, consectetur adipiscing
         </ServiceCard.Notice>
         <ServiceCard.CallToAction />
       </ServiceCard>
@@ -117,46 +117,46 @@ function ServiceGrid() {
         <div>
           <ServiceCard.Title>Shopify theme</ServiceCard.Title>
           <ServiceCard.Price>
-            €2.300<span className="text-xl font-normal">*</span>
+            $2300<span className="text-xl font-normal">*</span>
           </ServiceCard.Price>
           <ServiceCard.Description>
-            Level up your Shopify store&apos;s web presence with a custom-made theme, adapted to
+            Lorem ipsum dolor sit&apos;s Lorem ipsum dolor sit amet, consectetur adipiscing
             your products.
           </ServiceCard.Description>
           <ServiceCard.List>
             <ServiceCard.List.BenefitListItem>
-              Unique, modern, customized design
+              dolor sit amet, consectetur adipiscing
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Responsive, accessible development
+              dolor sit amet, consectetur adipiscing
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Seamless integration with Shopify & your store
+              dolor sit amet, consectetur adipiscing
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Effortless, completely self-customizable content
+              Lorem ipsum dolor sit amet, consectetur adipiscing
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Adapted to products & customer audience
+              Lorem ipsum dolor sit amet, consectetur
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Boosted conversion rates
+              Lorem ipsum dolor sit amet
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.BenefitListItem>
-              Catch-up meetings & close communication
+              Lorem ipsum dolor sit amet, consectetur
             </ServiceCard.List.BenefitListItem>
             <ServiceCard.List.AddonListItem>
-              Content self-customization briefing <span className="text-neutrals-400">|</span> €500
+              Lorem ipsum dolor sit amet, consectetur <span className="text-neutrals-400">|</span> $500
             </ServiceCard.List.AddonListItem>
             <ServiceCard.List.AddonListItem>
-              Multilingual support <span className="text-neutrals-400">|</span> €850
+              Lorem ipsum dolor sit <span className="text-neutrals-400">|</span> $850
             </ServiceCard.List.AddonListItem>
             <ServiceCard.List.AddonListItem>
-              Analytics <span className="text-neutrals-400">|</span> €250
+              adipiscing <span className="text-neutrals-400">|</span> $250
             </ServiceCard.List.AddonListItem>
           </ServiceCard.List>
           <ServiceCard.Notice>
-            * entry level price, may vary depending on the project scope
+            * eLorem ipsum dolor sit amet, consectetur adipiscing project scope
           </ServiceCard.Notice>
         </div>
         <ServiceCard.CallToAction />
@@ -223,13 +223,12 @@ function ServiceGrid() {
           <ServiceCard.Title>Custom</ServiceCard.Title>
           <ServiceCard.Price>Individual price</ServiceCard.Price>
           <ServiceCard.Description>
-            Do you have a problem that does not fit into one of the packages? Don&apos;t hesitate to
-            ask ― I am your problem solver.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in purus mollis, gravida dui imperdiet, tincidunt augue.
             <br />
-            Let&apos;s get in touch and work out a personalized solution.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in
             <br />
             <br />
-            <span className="text-neutrals-100">Inquire for an individual offer!</span>
+            <span className="text-neutrals-100">posuere vestibulum ex. Etiam pulvinar ege!</span>
           </ServiceCard.Description>
         </div>
         <ServiceCard.CallToAction />

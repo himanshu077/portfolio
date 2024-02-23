@@ -11,7 +11,7 @@ const Imprint = () => {
                 <div className="max-w-prose md:mx-auto">
                     <h1
                         id="imprint-heading"
-                        className="mb-8 text-balance text-5xl/tight font-bold md:text-7xl/tight"
+                        className="!mb-8 !text-balance !text-5xl/tight !font-bold md:!text-7xl/tight"
                     >
                         Imprint
                     </h1>

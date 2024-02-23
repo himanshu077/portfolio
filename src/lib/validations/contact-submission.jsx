@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-const contactSubmissionSchema = z.object({
+export const contactSubmissionSchema = z.object({
   name: z
     .string()
     .min(1, { message: 'Name cannot be empty' })
@@ -12,4 +12,3 @@ const contactSubmissionSchema = z.object({
     .max(1800, { message: 'Message cannot be longer than 1800 characters' }),
 });
 
-export default contactSubmissionSchema;

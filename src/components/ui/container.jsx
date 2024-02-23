@@ -11,6 +11,4 @@ const Container = React.forwardRef(({ children, className, ...props }, ref) => (
     </div>
 ));
 
-Container.displayName = 'Container';
-
 export default Container;

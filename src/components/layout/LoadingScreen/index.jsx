@@ -1,11 +1,9 @@
 import Mark from '../../../assets/Images/logos/Mark.svg';
-import useLockBody from '@/hooks/use-body-lock';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
-  useLockBody(isLoading);
 
   useEffect(() => {
     setIsLoading(false);

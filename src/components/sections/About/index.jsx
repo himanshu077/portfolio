@@ -26,7 +26,7 @@ const About = () => {
                 <Image
                     src={backgroundImage}
                     alt="Lorem Ispum dolor"
-                    className="!h-full !max-h-screen !bg-neutrals-800 !object-cover !object-center lg:!col-start-1 lg:!col-end-3"
+                    className="!h-full !w-full !max-h-screen !bg-neutrals-800 !object-cover !object-center lg:!col-start-1 lg:!col-end-3"
                 />
                 <div className="!w-full !py-28 max-lg:!mx-auto max-lg:!w-11/12 max-lg:!max-w-7xl lg:!ps-10 xl:!ps-20">
                     <Caption id="about-heading">About</Caption>

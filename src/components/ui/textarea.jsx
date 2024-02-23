@@ -12,6 +12,5 @@ const Textarea = forwardRef(({ className, ...props }, ref) => (
         {...props}
     />
 ));
-Textarea.displayName = 'Textarea';
 
 export default Textarea;

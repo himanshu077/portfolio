@@ -1,8 +1,9 @@
 import React from 'react'
 import Container from '../../ui/container'
 import { Caption, Heading } from "../../ui/typography"
-// import ProjectCarousel from '../../ProjectCarousle'
+import ProjectCarousel from '../../ProjectCarousle'
 import Section from '../../ui/section'
+import { projects } from './Data'
 
 const Work = () => {
     return (
@@ -19,9 +20,10 @@ const Work = () => {
                     <Heading>Dig into my universe</Heading>
                 </div>
             </Container>
-            {/* <ProjectCarousel
+            <ProjectCarousel
                 idle="client"
-            /> */}
+                projects={projects}
+            />
         </Section>
     )
 }

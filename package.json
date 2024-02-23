@@ -5,6 +5,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
+    "@hookform/resolvers": "^3.3.4",
     "@react-email/components": "^0.0.14",
     "@tailwindcss/typography": "^0.5.10",
     "@testing-library/jest-dom": "^5.17.0",

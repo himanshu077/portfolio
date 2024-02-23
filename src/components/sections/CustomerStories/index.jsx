@@ -16,7 +16,7 @@ const CustomerStories = () => {
         >
             <StarsBackground visible="client" />
             <Container>
-                <div className="mb-16 flex flex-col items-center text-center">
+                <div className="!mb-16 !flex !flex-col !items-center !text-center">
                     <Caption id="stories-heading">Customer Stories</Caption>
                     <Heading> Lorem Ispum Dolor sit amet </Heading>
                     <Paragraph>
@@ -25,13 +25,13 @@ const CustomerStories = () => {
                     </Paragraph>
                 </div>
             </Container>
-            <div className="mask-inline-faded group flex w-full overflow-x-hidden">
-                <ul className="group-hover:play-state-paused motion-reduce:play-state-paused flex animate-marquee">
+            <div className="mask-inline-faded group !flex !w-full overflow-x-hidden">
+                <ul className="group-hover:play-state-paused motion-reduce:play-state-paused !flex animate-marquee">
                     {CustomerStoriesData.map((testimonial) => <TestimonialCards testimonial={testimonial} />)}
                 </ul>
                 <ul
                     aria-hidden="true"
-                    className="group-hover:play-state-paused motion-reduce:play-state-paused flex animate-marquee"
+                    className="group-hover:play-state-paused motion-reduce:play-state-paused !flex animate-marquee"
                 >
                     {CustomerStoriesData.map((testimonial) => <TestimonialCards testimonial={testimonial} />)}
                 </ul>

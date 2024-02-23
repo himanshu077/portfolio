@@ -13,3 +13,7 @@ export function clamp(value, min, max) {
 export function formatDate(date) {
     return moment(date).format('MMMM YYYY');
 }
+
+export function formatDateWithDay(date) {
+    return moment(date).format('MMMM Do YYYY');
+  }

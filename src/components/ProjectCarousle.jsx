@@ -98,7 +98,7 @@ function ProjectSlide({
               {project.name}
             </h3>
           </div>
-          {project.tags && (
+          {project.tags && Array.isArray(project.tags) && (
             <div className="overflow-hidden">
               <p className="translate-y-full text-xs text-neutrals-50/90 transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0 lg:text-sm">
                 {project.tags.join(', ')}
@@ -107,18 +107,18 @@ function ProjectSlide({
           )}
         </article>
         <motion.img
+          src={project.poster.src}
           alt={project.poster.alt}
           loading="lazy"
           decoding="async"
           className={cn(
-            'pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover transition-[transform,opacity,filter] duration-700',
+            'pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover transition-[transform,opacity,filter] duration-700 ',
             isDisabled
               ? 'opacity-20 grayscale'
               : 'group-hover:scale-105 group-focus-visible:scale-105',
           )}
           style={{
             objectPosition: imagePosition,
-            backgroundColor: project.poster.asset.metadata.palette.dominant.background,
           }}
         />
       </a>
@@ -301,18 +301,6 @@ function ProjectCarousel({ projects }) {
     [dragStart, isDragging],
   );
 
-  const filteredProjects = projects.filter((project) => {
-    const isAnyProjectTagFiltered = selectedFilters.some((selectedFilter) =>
-      project.tags?.includes(selectedFilter),
-    );
-    if (isAnyProjectTagFiltered) return true;
-
-    const isWildcardFilterEnabledAndNoProjectTagFiltered =
-      selectedFilters.includes(wildcardFilter) &&
-      !project.tags?.some((projectTag) => projectTagFilters.includes(projectTag));
-    return isWildcardFilterEnabledAndNoProjectTagFiltered;
-  });
-
   return (
     <div
       ref={carouselWrapperRef}
@@ -369,7 +357,6 @@ function ProjectCarousel({ projects }) {
                 project={project}
                 index={index}
                 currentIndex={currentSlide}
-                isDisabled={!filteredProjects.includes(project)}
                 isDragging={isDragging}
                 carouselWidth={carouselWidth}
                 scrollPosition={scrollPosition}
