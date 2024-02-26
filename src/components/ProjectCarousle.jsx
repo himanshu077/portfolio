@@ -66,7 +66,7 @@ function ProjectSlide({
       className="relative aspect-[2/3] w-[clamp(18rem,42vmin,26rem)] overflow-hidden rounded-md"
     >
       <a
-        href={`/project/${project.slug.current}`}
+        href={`/project/${project.name}`}
         aria-label={isDisabled ? undefined : `Show ${project.name} project details`}
         data-astro-prefetch
         aria-disabled={isDisabled}

@@ -5,8 +5,10 @@ import { Caption, Heading, Paragraph } from "../../ui/typography"
 import TestimonialCards from "../../TestimonialCards"
 import StarsBackground from "../../StarsBackground"
 import { CustomerStoriesData } from "./Data"
+// import jsonData from "../../../Data/index.json"
 
 const CustomerStories = () => {
+    // const {CustomerStoriesData} = jsonData;
     return (
         <Section
             id="stories"
@@ -27,13 +29,13 @@ const CustomerStories = () => {
             </Container>
             <div className="mask-inline-faded group !flex !w-full overflow-x-hidden">
                 <ul className="group-hover:play-state-paused motion-reduce:play-state-paused !flex animate-marquee">
-                    {CustomerStoriesData.map((testimonial) => <TestimonialCards testimonial={testimonial} />)}
+                    {CustomerStoriesData.map((testimonial) => <TestimonialCards testimonial={testimonial}/>)}
                 </ul>
                 <ul
                     aria-hidden="true"
                     className="group-hover:play-state-paused motion-reduce:play-state-paused !flex animate-marquee"
                 >
-                    {CustomerStoriesData.map((testimonial) => <TestimonialCards testimonial={testimonial} />)}
+                    {CustomerStoriesData.map((testimonial) => <TestimonialCards testimonial={testimonial}/>)}
                 </ul>
             </div>
 

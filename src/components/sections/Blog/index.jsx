@@ -42,7 +42,7 @@ const Blog = () => {
                                         <a
                                             href={`/blog/${blogPost.slug.current}`}
                                             aria-label={`Show ${blogPost.title} blog post`}
-                                            className="!group !flex !items-center"
+                                            className="group !flex !items-center"
                                         >
                                             <div
                                                 className={cn(

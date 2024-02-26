@@ -38,21 +38,21 @@ function ContactForm() {
     >
       <fieldset
         disabled={isSubmitting}
-        className="!group !flex !flex-col !gap-y-6"
+        className="group flex flex-col gap-y-6"
       >
         <div>
           <Label htmlFor="contact-form-name">Name</Label>
           <Input
             id="contact-form-name"
             type="text"
-            className={errors.name ? '!border-error' : ''}
+            className={errors.name ? 'border-error' : ''}
             {...register('name', { required: true })}
           />
           {errors.name && (
-            <p className="!mt-2 !flex !items-center !text-sm !text-error">
+            <p className="mt-2 flex items-center text-sm text-error">
               <Icons.Warning
                 aria-hidden
-                className="!me-2 !inline !size-5"
+                className="me-2 inline size-5"
               />
               {errors.name.message}
             </p>
@@ -63,14 +63,14 @@ function ContactForm() {
           <Input
             id="contact-form-email"
             type="email"
-            className={errors.email ? '!border-error' : ''}
+            className={errors.email ? 'border-error' : ''}
             {...register('email', { required: true })}
           />
           {errors.email && (
-            <p className="!mt-2 !flex !items-center !text-sm !text-error">
+            <p className="mt-2 flex items-center text-sm text-error">
               <Icons.Warning
                 aria-hidden
-                className="!me-2 !inline !size-5"
+                className="me-2 inline size-5"
               />
               {errors.email.message}
             </p>
@@ -84,30 +84,30 @@ function ContactForm() {
             {...register('message', { required: true })}
           />
           {errors.message && (
-            <p className="!mt-2 !flex !items-center !text-sm !text-error">
+            <p className="mt-2 flex items-center text-sm text-error">
               <Icons.Warning
                 aria-hidden
-                className="!me-2 !inline !size-5"
+                className="me-2 inline size-5"
               />
               {errors.message.message}
             </p>
           )}
         </div>
-        <div className="!flex max-sm:!flex-col-reverse max-sm:!gap-y-6 sm:!items-center sm:!justify-between">
+        <div className="flex max-sm:flex-col-reverse max-sm:gap-y-6 sm:items-center sm:justify-between">
           <a
-            className="!inline-flex !items-center !text-neutrals-300 !transition-colors hover:!text-neutrals-50 focus-visible:!text-neutrals-50"
+            className="inline-flex items-center text-neutrals-300 transition-colors hover:text-neutrals-50 focus-visible:text-neutrals-50"
             href={`mailto:${siteConfig.email}`}
             title="Hit me up"
           >
             <Icons.Envelope
               aria-hidden="true"
-              className="!me-2 !inline !size-5"
+              className="me-2 inline size-5"
             />
             {siteConfig.email}
           </a>
           <Button
             type="submit"
-            className="disabled:!cursor-progress max-sm:!w-full"
+            className="disabled:cursor-progress max-sm:w-full"
           >
             Hit me up
             <div

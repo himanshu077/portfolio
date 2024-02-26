@@ -1,0 +1,159 @@
+{
+  "CustomerStoriesData": [
+    {
+      "0": [
+        {
+          "id": 1,
+          "quotes": "",
+          "name": "",
+          "title": "",
+          "src": ""
+        },
+        {
+          "id": 2,
+          "quotes": "",
+          "name": "",
+          "title": "",
+          "src": ""
+        },
+        {
+          "id": 3,
+          "quotes": "",
+          "name": "",
+          "title": "",
+          "src": ""
+        },
+        {
+          "id": 4,
+          "quotes": "",
+          "name": "",
+          "title": "",
+          "src": ""
+        },
+        {
+          "id": 5,
+          "quotes": "",
+          "name": "",
+          "title": "",
+          "src": ""
+        }
+      ],
+      "1": [
+        {
+          "id": 1,
+          "quotes": "",
+          "name": "",
+          "title": "",
+          "src": ""
+        },
+        {
+          "id": 2,
+          "quotes": "",
+          "name": "",
+          "title": "",
+          "src": ""
+        },
+        {
+          "id": 3,
+          "quotes": "",
+          "name": "",
+          "title": "",
+          "src": ""
+        },
+        {
+          "id": 4,
+          "quotes": "",
+          "name": "",
+          "title": "",
+          "src": ""
+        },
+        {
+          "id": 5,
+          "quotes": "",
+          "name": "",
+          "title": "",
+          "src": ""
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "",
+      "tags": "",
+      "date": "",
+      "poster": { "src": "", "alt": "" }
+    },
+    {
+      "id": 2,
+      "name": "",
+      "tags": "",
+      "date": "",
+      "poster": { "src": "", "alt": "" }
+    },
+    {
+      "id": 3,
+      "name": "",
+      "tags": "",
+      "date": "",
+      "poster": { "src": "", "alt": "" }
+    },
+    {
+      "id": 4,
+      "name": "",
+      "tags": "",
+      "date": "",
+      "poster": { "src": "", "alt": "" }
+    },
+    {
+      "id": 5,
+      "name": "",
+      "tags": "",
+      "date": "",
+      "poster": { "src": "", "alt": "" }
+    },
+    {
+      "id": 6,
+      "name": "",
+      "tags": "",
+      "date": "",
+      "poster": { "src": "", "alt": "" }
+    },
+    {
+      "id": 7,
+      "name": "",
+      "tags": "",
+      "date": "",
+      "poster": { "src": "", "alt": "" }
+    },
+    {
+      "id": 8,
+      "name": "",
+      "tags": "",
+      "date": "",
+      "poster": { "src": "", "alt": "" }
+    },
+    {
+      "id": 9,
+      "name": "",
+      "tags": "",
+      "date": "",
+      "poster": { "src": "", "alt": "" }
+    },
+    {
+      "id": 10,
+      "name": "",
+      "tags": "",
+      "date": "",
+      "poster": { "src": "", "alt": "" }
+    },
+    {
+      "id": 11,
+      "name": "",
+      "tags": "",
+      "date": "",
+      "poster": { "src": "", "alt": "" }
+    }
+  ]
+}

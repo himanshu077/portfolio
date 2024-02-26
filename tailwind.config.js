@@ -26,15 +26,12 @@ module.exports = {
                 0.5: '0.5px',
             },
             minHeight: {
-                /* @ts-ignore - required fallback for incremental adoption */
                 screen: ['100vh', '100svh'],
             },
             maxHeight: {
-                /* @ts-ignore - required fallback for incremental adoption */
                 screen: ['100vh', '100svh'],
             },
             height: {
-                /* @ts-ignore - required fallback for incremental adoption */
                 screen: ['100vh', '100svh'],
             },
             backgroundImage: {

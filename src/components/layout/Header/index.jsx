@@ -14,11 +14,11 @@ const links = [
     },
     {
         label: 'Work',
-        href: '#work',
+        href: '/#work',
     },
     {
         label: 'Services',
-        href: '#services',
+        href: '/#services',
     },
 ];
 
