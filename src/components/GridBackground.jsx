@@ -1,6 +1,7 @@
 import futureGridImage from '../assets/Images/future-grid.webp';
 import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useContext, useEffect } from 'react';
+import { PortfolioContext } from '../Context';
 
 const springConfig = {
   damping: 17.5,
@@ -9,6 +10,8 @@ const springConfig = {
 };
 
 function GridBackground() {
+  const portfolioData = useContext(PortfolioContext);
+  const data = portfolioData && portfolioData.website;
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const backgroundXSync = useTransform(mouseX, [-1, 1], [15, -15]);
@@ -43,7 +46,8 @@ function GridBackground() {
       aria-hidden
       className="pointer-events-none absolute inset-0 -z-50 overflow-hidden bg-primary bg-[size:103%_103%] bg-no-repeat object-fill"
       style={{
-        backgroundImage: `url(${futureGridImage})`,
+        // backgroundImage: `url(${data ? data.landing_page.cover_image : ''})`,
+          backgroundImage: `url(${futureGridImage})`,
         backgroundPosition: useMotionTemplate`calc(50% + ${backgroundX}px) calc(50% + ${backgroundY}px)`,
       }}
     />

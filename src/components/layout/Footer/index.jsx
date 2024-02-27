@@ -20,21 +20,13 @@ const primaryLinks = [
     href: '/#stories',
   },
   {
-    label: 'Services',
-    href: '/#services',
-  },
-  {
     label: 'Contact',
     href: '/#contact',
   },
   {
     label: 'Source code',
     href: '/#source-code',
-  },
-  {
-    label: 'Blog',
-    href: '/blog',
-  },
+  }
 ];
 
 const secondaryLinks = [
@@ -53,7 +45,7 @@ const socials = [
   {
     label: 'View Instagram profile',
     href: siteConfig.links.instagram,
-    icon: Icons.Instagram,
+    icon: Icons.Facebook,
   },
   {
     label: 'View LinkedIn profile',
@@ -61,14 +53,9 @@ const socials = [
     icon: Icons.LinkedIn,
   },
   {
-    label: 'View Dribbble profile',
-    href: siteConfig.links.dribbble,
-    icon: Icons.Dribbble,
-  },
-  {
     label: 'View Behance profile',
     href: siteConfig.links.behance,
-    icon: Icons.Behance,
+    icon: Icons.UpWork,
   },
   {
     label: 'Join Discord community',

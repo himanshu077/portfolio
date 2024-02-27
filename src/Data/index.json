@@ -1,159 +1,236 @@
 {
-  "CustomerStoriesData": [
-    {
-      "0": [
-        {
-          "id": 1,
-          "quotes": "",
-          "name": "",
-          "title": "",
-          "src": ""
-        },
-        {
-          "id": 2,
-          "quotes": "",
-          "name": "",
-          "title": "",
-          "src": ""
-        },
-        {
-          "id": 3,
-          "quotes": "",
-          "name": "",
-          "title": "",
-          "src": ""
-        },
-        {
-          "id": 4,
-          "quotes": "",
-          "name": "",
-          "title": "",
-          "src": ""
-        },
-        {
-          "id": 5,
-          "quotes": "",
-          "name": "",
-          "title": "",
-          "src": ""
-        }
+  "website": {
+    "title": "Himanshu's Portfolio",
+    "description": "I'm a passionate designer and developer who loves to create beautiful and functional websites and applications.",
+    "keywords": [
+      "web design",
+      "web development",
+      "graphic design",
+      "branding",
+      "photography",
+      "illustration",
+      "motion design",
+      "3d design",
+      "ui/ux design",
+      "app design",
+      "print design",
+      "packaging design"
+    ],
+    "author": "Himanshu Kumar",
+    "email": "himanshukumar077@gmail.com",
+    "phone": "+91 1234567890",
+    "landing_page": {
+      "cover_image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "title": "Web Development and Design Studio from the Future",
+      "about_image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "about_title": [
+        "Developer",
+        "Graphic Designer",
+        "UI/UX Designer",
+        "App Designer"
       ],
-      "1": [
-        {
-          "id": 1,
-          "quotes": "",
-          "name": "",
-          "title": "",
-          "src": ""
-        },
-        {
-          "id": 2,
-          "quotes": "",
-          "name": "",
-          "title": "",
-          "src": ""
-        },
-        {
-          "id": 3,
-          "quotes": "",
-          "name": "",
-          "title": "",
-          "src": ""
-        },
-        {
-          "id": 4,
-          "quotes": "",
-          "name": "",
-          "title": "",
-          "src": ""
-        },
-        {
-          "id": 5,
-          "quotes": "",
-          "name": "",
-          "title": "",
-          "src": ""
-        }
-      ]
+      "about_description": "I'm a passionate designer and developer who loves to create beautiful and functional websites and applications. I have a strong eye for detail and a keen understanding of user experience. I'm always looking to learn and improve my skills and abilities."
+    }
+  },
+  "testimonials": [
+    {
+      "id": "1",
+      "quote": "Great to work with Himanshu! Himanshu is very responsive and skilled professional designer, who enriches your views with creativity! Will sure work with Himanshu again!",
+      "name": "William Smith",
+      "designation": "CEO of Abc Corp",
+      "avatar": "https://avatar.iran.liara.run/public/1",
+      "enabled": true
+    },
+    {
+      "id": "2",
+      "quote": "Himanshu is a great designer. He is very easy to work with and very responsive. I would highly recommend him.",
+      "name": "David Smith",
+      "designation": "Visual Artist & Designer",
+      "avatar": "https://avatar.iran.liara.run/public/2",
+      "enabled": true
+    },
+    {
+      "id": "3",
+      "quote": "He understood and executed our vision with precision and creativity. Always up to hire him again",
+      "name": "Corey Anderson",
+      "designation": "Co-Founder of Aviana Developmenet",
+      "avatar": "https://avatar.iran.liara.run/public/3",
+      "enabled": true
+    },
+    {
+      "id": "4",
+      "quote": "We placed our complete trust in Himanshu's hands, which more than paid off as our expectations were exceeded. We are super happy with the result.",
+      "name": "Sonja Dettmann",
+      "designation": "Founders of Shoppisticated & Contentary",
+      "avatar": "https://avatar.iran.liara.run/public/4",
+      "enabled": true
+    },
+    {
+      "id": "5",
+      "quote": "With his high level of professionalism and intuitive sense of digital design, Himanshu has created an incredibly customized website branding for my business that is simply mind blowing.",
+      "name": "Steve Smith",
+      "designation": "CEO of XYZ Corp",
+      "avatar": "https://avatar.iran.liara.run/public/5",
+      "enabled": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Bidmii",
+      "tags": "Website",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "2",
+      "name": "Expense Calc",
+      "tags": "App",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "3",
+      "name": "BMI Calculator",
+      "tags": "App",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "4",
+      "name": "Angular Postman",
+      "tag": "Website",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "5",
+      "name": "Angular Chat",
+      "tags": "Website",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "6",
+      "name": "Quiz Flutter",
+      "tags": "App",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "7",
+      "name": "React Monorepo",
+      "tags": "Website",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "8",
+      "name": "React Url Shortener",
+      "icon": "ui-ux-design",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "9",
+      "name": "App Design",
+      "icon": "app-design",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "10",
+      "name": "Print Design",
+      "icon": "print-design",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "11",
+      "name": "Packaging Design",
+      "icon": "packaging-design",
+      "image": {
+        "id": "1",
+        "src": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+        "alt": ""
+      },
+      "enabled": true
     }
   ],
   "projects": [
     {
-      "id": 1,
-      "name": "",
-      "tags": "",
-      "date": "",
-      "poster": { "src": "", "alt": "" }
+      "id": "1",
+      "category_id": "1",
+      "name": "Caroline Seiffert",
+      "description": "Website for Caroline Seiffert ― a visual artist whose skill-on photographs are still life compositions of found everyday objects and all their surroundings. They arise from a natural flow of intuition and an open-hearted view.",
+      "project_link": "https://www.github.com",
+      "live_link": "https://www.carolineseiffert.com",
+      "tags": ["marketing", "website", "branding"],
+      "date": "2020-01-01",
+      "poster": {
+        "id": "123",
+        "src": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+        "alt": ""
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["React", "Gatsby", "GraphQL", "Netlify"]
     },
     {
-      "id": 2,
-      "name": "",
-      "tags": "",
-      "date": "",
-      "poster": { "src": "", "alt": "" }
+      "id": "2",
+      "category_id": "2",
+      "name": "Expense Calc",
+      "description": "Website for Expense Calc ― a visual artist whose skill-on photographs are still life compositions of found everyday objects and all their surroundings. They arise from a natural flow of intuition and an open-hearted view.",
+      "project_link": "https://github.com/himanshu077/expense-calc",
+      "live_link": "https://www.carolineseiffert.com",
+      "tags": ["marketing", "App", "branding"],
+      "date": "2020-01-01",
+      "poster": {
+        "id": "123",
+        "src": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+        "alt": ""
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Dart", "Gatsby", "GraphQL", "Netlify"]
+    }
+  ],
+  "socials": [
+    {
+      "name": "github",
+      "url": "https://www.facebook.com/himanshu064",
+      "label": "View Github Profile",
+      "className": "fa-brands fa-github"
     },
     {
-      "id": 3,
-      "name": "",
-      "tags": "",
-      "date": "",
-      "poster": { "src": "", "alt": "" }
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/in/himanshu-kumar-76289417/",
+      "label": "View Linked Profile",
+      "className": "fa-brands fa-linkedin"
     },
     {
-      "id": 4,
-      "name": "",
-      "tags": "",
-      "date": "",
-      "poster": { "src": "", "alt": "" }
+      "name": "facebook",
+      "url": "https://www.facebook.com/himanshu064",
+      "label": "View Facebook Profile",
+      "className": "fa-brands fa-facebook"
     },
     {
-      "id": 5,
-      "name": "",
-      "tags": "",
-      "date": "",
-      "poster": { "src": "", "alt": "" }
+      "name": "Upwork",
+      "url": "https://www.upwork.com/fl/himanshu077",
+      "label": "View UpWork Profile",
+      "className": "fa-brands fa-upwork"
     },
     {
-      "id": 6,
-      "name": "",
-      "tags": "",
-      "date": "",
-      "poster": { "src": "", "alt": "" }
-    },
-    {
-      "id": 7,
-      "name": "",
-      "tags": "",
-      "date": "",
-      "poster": { "src": "", "alt": "" }
-    },
-    {
-      "id": 8,
-      "name": "",
-      "tags": "",
-      "date": "",
-      "poster": { "src": "", "alt": "" }
-    },
-    {
-      "id": 9,
-      "name": "",
-      "tags": "",
-      "date": "",
-      "poster": { "src": "", "alt": "" }
-    },
-    {
-      "id": 10,
-      "name": "",
-      "tags": "",
-      "date": "",
-      "poster": { "src": "", "alt": "" }
-    },
-    {
-      "id": 11,
-      "name": "",
-      "tags": "",
-      "date": "",
-      "poster": { "src": "", "alt": "" }
+      "name": "Freelancer",
+      "url": "https://www.freelancer.in/u/himanshu077",
+      "label": "View Freelancer Profile",
+      "className": ""
     }
   ]
 }

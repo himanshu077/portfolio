@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Container from '../../ui/container'
 import { Caption, Heading } from "../../ui/typography"
 import ProjectCarousel from '../../ProjectCarousle'
 import Section from '../../ui/section'
-import { projects } from './Data'
+import { PortfolioContext } from "../../../Context";
 
 const Work = () => {
+    const portfolioData = useContext(PortfolioContext);
+    const projects = portfolioData && portfolioData.categories ? portfolioData.categories : [];
     return (
         <Section
             id="work"

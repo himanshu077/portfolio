@@ -1,10 +1,13 @@
-import React from "react"
+import React, { useContext } from "react"
 import Container from "../../ui/container"
 import Button from "../../ui/button"
 import GridBackground from "../../GridBackground"
+import { PortfolioContext } from "../../../Context"
 
 
 const Hero = () => {
+    const portfolioData = useContext(PortfolioContext);
+    const data = portfolioData && portfolioData.website;
     return (
 
         <section
@@ -18,7 +21,7 @@ const Hero = () => {
                         id="hero-heading"
                         className="text-balance text-center text-4xl/tight font-bold text-neutrals-50 sm:text-5xl/tight md:text-7xl lg:text-8xl/tight"
                     >
-                        Web Development and Design Studio from the Future
+                        {data ? data.landing_page.title : ''}
                     </h1>
                     <div className="mt-12 flex items-stretch gap-x-6 gap-y-3 max-sm:flex-col sm:items-center">
                         <Button
@@ -28,15 +31,6 @@ const Hero = () => {
                             size="large"
                         >
                             Dig into my universe
-                        </Button>
-                        <Button
-                            as="a"
-                            href="/#services"
-                            background="primary"
-                            size="large"
-                            isGhost
-                        >
-                            See services
                         </Button>
                     </div>
                 </div>

@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from '../../ui/container';
 import Button from '../../ui/button';
 import Image from '../../ui/image';
 import Icons from '../../ui/icons';
-import { projects } from './Data';
 import { formatDate } from '../../../lib/utils';
+import { PortfolioContext } from "../../../Context";
 
 const ProjectDetails = () => {
+  const portfolioData = useContext(PortfolioContext);
+  const projects = portfolioData && portfolioData.projects ? portfolioData.projects : [];
+
   return (
     <div>
-      {projects.map((project) => (
+      {projects?.map((project) => (
         <section
           aria-labelledby="project-details-heading"
           className="relative flex min-h-screen w-full bg-neutrals-900 py-[14vh] after:absolute after:inset-0 after:h-full after:w-full after:bg-gradient-to-t after:from-neutrals-900 after:to-neutrals-900/60"
@@ -57,10 +60,10 @@ const ProjectDetails = () => {
               )}
               <hr className="mb-8 mt-4 h-px border-0 bg-gradient-to-r from-neutrals-50/40 to-transparent" />
               <div className="flex gap-x-4">
-                {project.projecturl && (
+                {project.live_link && (
                   <Button
                     as="a"
-                    href={project.projecturl}
+                    href={project.live_link}
                     rel="noreferrer"
                     target="_blank"
                     size="small"
@@ -69,10 +72,10 @@ const ProjectDetails = () => {
                     Project
                   </Button>
                 )}
-                {project.githuburl && (
+                {project.project_link && (
                   <Button
                     as="a"
-                    href={project.githuburl}
+                    href={project.project_link}
                     rel="noreferrer"
                     target="_blank"
                     size="small"
@@ -84,7 +87,7 @@ const ProjectDetails = () => {
                 )}
               </div>
             </div>
-            {project.images.length > 0 && (
+            {project.images && project.images.length > 0 && (
               <a
                 href="#project-gallery"
                 title="See project breakdown"

@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import Container from '../../ui/container'
 import { cn } from '../../../lib/utils'
-import WordMarkImage from "../../../assets/Images/logos/WordMark.svg"
 import Button from '../../ui/button';
 import MobileNavigation from '../MobileNavigation';
 import useScrollThreshold from '../../../hooks/use-scroll-threshold';
-import Image from '../../ui/image';
 
 const links = [
     {
@@ -15,11 +13,7 @@ const links = [
     {
         label: 'Work',
         href: '/#work',
-    },
-    {
-        label: 'Services',
-        href: '/#services',
-    },
+    }
 ];
 
 const GRACE_THRESHOLD = 12;
@@ -73,12 +67,7 @@ const Header = () => {
                                 data-astro-prefetch
                                 className="hover:animate-jiggle"
                             >
-                                <Image
-                                    src={WordMarkImage}
-                                    alt="Lorem Ispum"
-                                    isAboveTheFold
-                                    className="h-3.5 md:h-4"
-                                />
+                                <h1 className="h-3.5 md:h-4 text-xl font-extrabold mb-4"><span className='font-black text-2xl'>Himanshu</span> Kumar</h1>
                             </a>
                         </div>
                         <div className="flex items-center justify-end">

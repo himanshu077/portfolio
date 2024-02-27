@@ -57,9 +57,9 @@ function ProjectSlide({
 
   return (
     <motion.li
-      key={project._id}
+      key={project.id}
       ref={slideRef}
-      aria-labelledby={`project-item-${project._id}-heading`}
+      aria-labelledby={`project-item-${project.id}-heading`}
       data-item-index={index}
       aria-current={currentIndex === index}
       aria-hidden={isDisabled}
@@ -92,7 +92,7 @@ function ProjectSlide({
           </div>
           <div className="overflow-hidden">
             <h3
-              id={`project-item-${project._id}-heading`}
+              id={`project-item-${project.id}-heading`}
               className="translate-y-full text-2xl font-bold transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0 lg:text-4xl"
             >
               {project.name}
@@ -107,15 +107,13 @@ function ProjectSlide({
           )}
         </article>
         <motion.img
-          src={project.poster.src}
-          alt={project.poster.alt}
+          src={project.image?.src || project.image ||''}
+          alt={project.image?.alt || project.name || ''}
           loading="lazy"
           decoding="async"
           className={cn(
             'pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover transition-[transform,opacity,filter] duration-700 ',
-            isDisabled
-              ? 'opacity-20 grayscale'
-              : 'group-hover:scale-105 group-focus-visible:scale-105',
+            isDisabled ? 'opacity-20 grayscale' : 'group-hover:scale-105 group-focus-visible:scale-105',
           )}
           style={{
             objectPosition: imagePosition,
@@ -128,7 +126,6 @@ function ProjectSlide({
 
 const projectTagFilters = ['Website', 'Graphic design', 'Archive'];
 const wildcardFilter = 'Archive';
-
 
 function ProjectFiltersSelect({ selectedFiltersState }) {
   const [selectedFilters, setSelectedFilters] = selectedFiltersState;
@@ -353,7 +350,7 @@ function ProjectCarousel({ projects }) {
           >
             {projects.map((project, index) => (
               <ProjectSlide
-                key={project._id}
+                key={project.id}
                 project={project}
                 index={index}
                 currentIndex={currentSlide}

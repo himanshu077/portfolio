@@ -10,7 +10,7 @@ const TestimonialCards = ({testimonial}) => {
 >
   <article className="flex h-full flex-col justify-between gap-y-2">
     <blockquote className="max-w-prose text-sm/relaxed text-neutrals-200 lg:text-base/relaxed">
-      &quot;{testimonial.quotes}&quot;
+      &quot;{testimonial.quote}&quot;
     </blockquote>
     <div className="mt-6 flex items-center">
       <div className="me-3 flex">
@@ -21,7 +21,7 @@ const TestimonialCards = ({testimonial}) => {
             alt={testimonial.name}
             className="h-full w-full"
             
-            src={testimonial.src}
+            src={testimonial.avatar}
           />
         </div>
       </div>
@@ -29,7 +29,7 @@ const TestimonialCards = ({testimonial}) => {
         <cite>
           <h3 className="lg:text-md mb-0.5 not-italic">{testimonial.name}</h3>
         </cite>
-        <p className="text-xs text-neutrals-200 lg:text-sm">{testimonial.title}</p>
+        <p className="text-xs text-neutrals-200 lg:text-sm">{testimonial.designation}</p>
       </div>
     </div>
   </article>
