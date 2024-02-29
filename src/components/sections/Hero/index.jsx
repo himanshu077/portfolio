@@ -5,9 +5,11 @@ import GridBackground from "../../GridBackground"
 import { PortfolioContext } from "../../../context/protfolioContext"
 
 
+
 const Hero = () => {
     const portfolioData = useContext(PortfolioContext);
     const data = portfolioData && portfolioData.website;
+    console.log(data , "data");
     return (
 
         <section
@@ -19,7 +21,7 @@ const Hero = () => {
                 <div className="flex flex-col items-center justify-center">
                     <h1
                         id="hero-heading"
-                        className="text-balance text-center text-4xl/tight font-bold text-primary sm:text-5xl/tight md:text-7xl lg:text-8xl/tight"
+                        className="text-balance text-center text-4xl/tight font-bold text-white sm:text-5xl/tight md:text-7xl lg:text-8xl/tight"
                     >
                         {data ? data.landing_page.about.title : ''}
                     </h1>

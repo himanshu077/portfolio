@@ -17,3 +17,5 @@ export function formatDate(date) {
 export function formatDateWithDay(date) {
     return moment(date).format('MMMM Do YYYY');
   }
+
+  export const defaultAvatarImage = "https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg"

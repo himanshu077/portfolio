@@ -1,4 +1,4 @@
-import Mark from '../../../assets/Images/logos/Mark.svg';
+// import Mark from '../../../assets/Images/logos/Mark.svg';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -19,7 +19,7 @@ function LoadingScreen() {
           transition={{ duration: 1, delay: 0.35 }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-neutrals-900"
         >
-          <motion.img
+          {/* <motion.img
             src={Mark}
             alt="Lorem Ispum"
             width={Mark.width}
@@ -33,7 +33,7 @@ function LoadingScreen() {
             }}
             transition={{ duration: 0.5 }}
             className="h-24 w-24 animate-pulse"
-          />
+          /> */}
         </motion.div>
       )}
     </AnimatePresence>

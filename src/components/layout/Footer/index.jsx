@@ -1,11 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 import Container from '../../ui/container';
-import Image from '../../ui/image';
-import Mark from "../../../assets/Images/logos/Mark.svg"
-import siteConfig from '../../../config/site';
+// import Image from '../../ui/image';
+// import Mark from "../../../assets/Images/logos/Mark.svg"
 import Icons from '../../ui/icons';
-
+import { useContext } from 'react';
+import { PortfolioContext } from "../../../context/protfolioContext";
 const primaryLinks = [
   {
     label: 'About',
@@ -26,46 +26,79 @@ const primaryLinks = [
   {
     label: 'Source code',
     href: '/#source-code',
-  }
-];
-
-const secondaryLinks = [
+  },
   {
-    label: 'Imprint',
-    href: '/imprint',
+    label: 'Services',
+    href: '/#services',
+  },
+  {
+    label: 'Blog',
+    href: '/blog',
   },
 ];
 
-const socials = [
-  {
-    label: 'View GitHub profile',
-    href: siteConfig.links.github,
-    icon: Icons.GitHub,
-  },
-  {
-    label: 'View Instagram profile',
-    href: siteConfig.links.instagram,
-    icon: Icons.Facebook,
-  },
-  {
-    label: 'View LinkedIn profile',
-    href: siteConfig.links.linkedin,
-    icon: Icons.LinkedIn,
-  },
-  {
-    label: 'View Behance profile',
-    href: siteConfig.links.behance,
-    icon: Icons.UpWork,
-  },
-  {
-    label: 'Join Discord community',
-    href: siteConfig.links.discord,
-    icon: Icons.Discord,
-  },
-];
+// const secondaryLinks = [
+//   {
+//     label: 'Imprint',
+//     href: '/imprint',
+//   },
+// ];
+
+// const socials = [
+//   {
+//     label: 'View GitHub profile',
+//     href: siteConfig.links.github,
+//     icon: Icons.GitHub,
+//   },
+//   {
+//     label: 'View Instagram profile',
+//     href: siteConfig.links.instagram,
+//     icon: Icons.Facebook,
+//   },
+//   {
+//     label: 'View LinkedIn profile',
+//     href: siteConfig.links.linkedin,
+//     icon: Icons.LinkedIn,
+//   },
+//   {
+//     label: 'View Behance profile',
+//     href: siteConfig.links.behance,
+//     icon: Icons.UpWork,
+//   },
+//   {
+//     label: 'Join Discord community',
+//     href: siteConfig.links.discord,
+//     icon: Icons.Discord,
+//   },
+// ];
 
 function Footer() {
-  const [currentYear] = useState(() => new Date().getFullYear());
+  const profileData = useContext(PortfolioContext);
+  // const [currentYear] = useState(() => new Date().getFullYear());
+
+  let socials =[
+    {
+      label: profileData.socials?.github?.label,
+      href: profileData.socials?.github?.url,
+      icon: Icons.GitHub,
+    },
+    {
+      label: profileData.socials?.facebook?.label,
+      href: profileData.socials?.facebook?.url,
+      icon: Icons.Facebook,
+    },
+    {
+      label: profileData.socials?.linkedin?.label,
+      href: profileData.socials?.linkedin?.url,
+      icon: Icons.LinkedIn,
+    },
+    {
+      label: profileData.socials?.upwork?.label,
+      href: profileData.socials?.upwork?.url,
+      icon: Icons.UpWork,
+    },
+  ]
+
 
   return (
     <footer
@@ -73,7 +106,7 @@ function Footer() {
       className="relative z-10 w-full border-t-0.5 border-neutrals-600  bg-neutrals-900 py-3"
     >
       <Container>
-        <div className="flex justify-center py-12">
+        {/* <div className="flex justify-center py-12">
           <a
             href="/"
             title="Navigate home"
@@ -85,8 +118,8 @@ function Footer() {
               className="h-16 w-16"
             />
           </a>
-        </div>
-        <hr className="h-px border-0 bg-gradient-to-r from-transparent via-neutrals-600 to-transparent" />
+        </div> */}
+        {/* <hr className="h-px border-0 bg-gradient-to-r from-transparent via-neutrals-600 to-transparent" /> */}
         <nav
           aria-label="Primary"
           className="flex flex-wrap justify-center gap-6 py-12"
@@ -108,7 +141,7 @@ function Footer() {
             aria-label="Secondary"
             className="flex flex-wrap justify-center gap-6 lg:order-last lg:justify-end"
           >
-            {secondaryLinks.map((link) => (
+            {/* {secondaryLinks.map((link) => (
               <a
                 key={link.href}
                 className="text-xs uppercase text-neutrals-300 transition-colors hover:text-neutrals-50 focus-visible:text-neutrals-50"
@@ -117,7 +150,7 @@ function Footer() {
               >
                 {link.label}
               </a>
-            ))}
+            ))} */}
           </nav>
           <ul
             aria-label="Socials"
@@ -142,7 +175,7 @@ function Footer() {
             ))}
           </ul>
           <div className="flex justify-center lg:order-first lg:justify-start">
-            <small className="text-xs text-neutrals-300">&copy; {currentYear} LOREM ISPUM</small>
+            {/* <small className="text-xs text-neutrals-300">&copy; {currentYear} LOREM ISPUM</small> */}
           </div>
         </div>
       </Container>

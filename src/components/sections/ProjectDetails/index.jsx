@@ -5,11 +5,12 @@ import Image from '../../ui/image';
 import Icons from '../../ui/icons';
 import { formatDate } from '../../../lib/utils';
 import { PortfolioContext } from '../../../context/protfolioContext';
+import { useParams } from 'react-router-dom';
 
 const ProjectDetails = () => {
+  const { id }= useParams();
   const portfolioData = useContext(PortfolioContext);
-  const projects = portfolioData && portfolioData.projects ? portfolioData.projects.filter(project => project.enabled) : [];
-
+  const projects = portfolioData && portfolioData.projects ? portfolioData.projects.filter(project => project.id === id) : [];
   return (
     <div>
       {projects.map((project) => (
@@ -92,7 +93,7 @@ const ProjectDetails = () => {
                 )}
               </div>
             </div>
-            {project.image_gallery && project.image_gallery.length > 0 && (
+            {project?.image_gallery && project?.image_gallery?.length > 0 && (
               <a
                 href="#project-gallery"
                 title="See project breakdown"
@@ -104,7 +105,7 @@ const ProjectDetails = () => {
             )}
           </Container>
           {
-            project.image_gallery.length > 0 && (
+            project?.image_gallery?.length > 0 && (
               <section
                 id="project-gallery"
                 aria-label="Project Gallery"

@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "./ui/image"
+import { defaultAvatarImage } from "../lib/utils"
 
 
 const TestimonialCards = ({testimonial}) => {
@@ -21,7 +22,7 @@ const TestimonialCards = ({testimonial}) => {
             alt={testimonial.name}
             className="h-full w-full"
             
-            src={testimonial.avatar}
+            src={testimonial.avatar || defaultAvatarImage}
           />
         </div>
       </div>

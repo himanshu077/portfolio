@@ -13,6 +13,10 @@ const links = [
     {
         label: 'Work',
         href: '/#work',
+    },
+    {
+        label: 'Services',
+        href: '/#services',
     }
 ];
 
@@ -67,7 +71,7 @@ const Header = () => {
                                 data-astro-prefetch
                                 className="hover:animate-jiggle"
                             >
-                                <h1 className="h-3.5 md:h-4 text-xl font-extrabold mb-4"><span className='font-black text-2xl'>Himanshu</span> Kumar</h1>
+                                <h1 className="h-3.5 md:h-4 lg:text-xl text-sm lg:font-extrabold font-semibold lg:mb-4 mb-7 "><span className='lg:font-black font-bold lg:text-2xl text-base '>Himanshu</span> Kumar</h1>
                             </a>
                         </div>
                         <div className="flex items-center justify-end">
