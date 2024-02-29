@@ -9,19 +9,21 @@ import { Caption, Heading } from '../components/ui/typography';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { contactSubmissionSchema } from '../lib/validations/contact-submission';
-import { useContext } from 'react';
+import { useContext ,useState} from 'react';
 import { PortfolioContext } from '../context/protfolioContext';
 
 function ContactForm() {
   const portfolioData = useContext(PortfolioContext);
   const data = portfolioData && portfolioData.website ? portfolioData.website : "";
+  const [isSubmitSuccessful, setIsSubmitSuccessful] = useState(false);
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitSuccessful, isSubmitting },
+    formState: { errors, isSubmitting },
+    reset,
   } = useForm({
     resolver: zodResolver(contactSubmissionSchema),
-    mode: 'onTouched',
+    mode: 'onChange',
   });
 
   // const sendEmail = async () => {
@@ -51,6 +53,53 @@ function ContactForm() {
   //     console.log(error);
   //   }
   // }
+  // const handleSubmitEmail = async(data) => {
+  //   console.log(data, "data");
+  //   let url =
+  //     "https://my9h84b2f9.execute-api.ap-south-1.amazonaws.com/corsHeaderAllowed/sendMail";
+  //   const payload = {
+  //     email: data.email,
+  //     body: data.message,
+  //     subject: "hello mail, from Contact , Portfolio website",
+  //   };
+  //   try {
+  //     const response = await axios.post(url, payload);
+  //     console.log(response, "response");
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+    const handleSubmitEmail = async (data) => {
+      const payload = {
+        email: "mohit2.netweb@gmail.com",
+        subject: data.message,
+        body: "hello mail, from Contact , Portfolio website",
+      };
+
+      try {
+        const response = await fetch(
+          "https://my9h84b2f9.execute-api.ap-south-1.amazonaws.com/default/sendMail",
+          {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          }
+        );
+
+        if (!response.ok) {
+          setIsSubmitSuccessful(true);
+          reset();
+        }
+      } catch (error) {
+        setIsSubmitSuccessful(false);
+      }
+    };
+
+ 
   
   return isSubmitSuccessful ? (
     <div>
@@ -59,13 +108,12 @@ function ContactForm() {
       <Image
         metadata={contactSuccessImage}
         alt="A flying paper plane"
+        src={contactSuccessImage}
       />
     </div>
   ) : (
     <form
-      onSubmit={() => {
-        void handleSubmit();
-      }}
+      onSubmit={handleSubmit(handleSubmitEmail)}
     >
       <fieldset
         disabled={isSubmitting}
@@ -77,7 +125,7 @@ function ContactForm() {
             id="contact-form-name"
             type="text"
             className={errors.name ? 'border-error' : ''}
-            {...register('name', { required: true })}
+            {...register('name')}
           />
           {errors.name && (
             <p className="mt-2 flex items-center text-sm text-error">
@@ -95,7 +143,7 @@ function ContactForm() {
             id="contact-form-email"
             type="email"
             className={errors.email ? 'border-error' : ''}
-            {...register('email', { required: true })}
+            {...register('email')}
           />
           {errors.email && (
             <p className="mt-2 flex items-center text-sm text-error">
@@ -107,6 +155,25 @@ function ContactForm() {
             </p>
           )}
         </div>
+        <div>
+        <Label htmlFor="contact-form-email">Phone</Label>
+        <Input
+            id="contact-form-email"
+            type="number"
+            className={errors.phone ? 'border-error' : ''}
+            {...register('phone')}
+          />
+          {errors.phone && (
+            <p className="mt-2 flex items-center text-sm text-error">
+              <Icons.Warning
+                aria-hidden
+                className="me-2 inline size-5"
+              />
+              {errors.phone.message}
+            </p>
+          )}
+        </div>
+
         <div>
           <Label htmlFor="contact-form-message">Message</Label>
           <Textarea
