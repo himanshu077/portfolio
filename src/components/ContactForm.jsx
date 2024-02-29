@@ -19,7 +19,7 @@ function ContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting , isValid },
     reset,
   } = useForm({
     resolver: zodResolver(contactSubmissionSchema),
@@ -89,7 +89,6 @@ function ContactForm() {
             body: JSON.stringify(payload),
           }
         );
-
         if (!response.ok) {
           setIsSubmitSuccessful(true);
           reset();
@@ -124,18 +123,8 @@ function ContactForm() {
           <Input
             id="contact-form-name"
             type="text"
-            className={errors.name ? 'border-error' : ''}
             {...register('name')}
           />
-          {errors.name && (
-            <p className="mt-2 flex items-center text-sm text-error">
-              <Icons.Warning
-                aria-hidden
-                className="me-2 inline size-5"
-              />
-              {errors.name.message}
-            </p>
-          )}
         </div>
         <div>
           <Label htmlFor="contact-form-email">Email</Label>
@@ -178,18 +167,8 @@ function ContactForm() {
           <Label htmlFor="contact-form-message">Message</Label>
           <Textarea
             id="contact-form-message"
-            className={errors.message ? 'border-error' : ''}
-            {...register('message', { required: true })}
+            {...register('message')}
           />
-          {errors.message && (
-            <p className="mt-2 flex items-center text-sm text-error">
-              <Icons.Warning
-                aria-hidden
-                className="me-2 inline size-5"
-              />
-              {errors.message.message}
-            </p>
-          )}
         </div>
         <div className="flex max-sm:flex-col-reverse max-sm:gap-y-6 sm:items-center sm:justify-between">
           <a
@@ -206,6 +185,7 @@ function ContactForm() {
           <Button
             type="submit"
             className="disabled:cursor-progress max-sm:w-full"
+            disabled={!isValid}
           >
             Hit me up
             <div

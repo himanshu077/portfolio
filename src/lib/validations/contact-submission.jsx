@@ -1,39 +1,27 @@
-import { z } from 'zod';
-
+import { z } from "zod";
+const phoneRegExp = /^\d{10}$/;
 export const contactSubmissionSchema = z.object({
-  name: z
-    .string()
-    .max(60, { message: "Name cannot be longer than 60 characters" })
-    .refine(
-      (value) => {
-        if (value) {
-          return true;
-        }
-        return false;
-      },
-      { message: "Name is required" }
-    ),
-  email: z.string().email(),
-  message: z
-    .string()
-    .max(1800, { message: "Message cannot be longer than 1800 characters" })
-    .refine(
-      (value) => {
-        if (value) {
-          return true;
-        }
-        return false;
-      },
-      { message: "Message is required" }
-    ),
+  email: z.string().nonempty({ message: "Email is required!" }).email(),
   phone: z
     .string()
-    .refine(value => {
-      if (value) {
-        return /^\+(?:[0-9] ?){6,14}[0-9]$/g.test(value);
-      }
-      return true;
-    }, { message: "Invalid phone number format" })
-    .optional(), // Phone is optional
+    .max(10, { message: "Phone Number cannot be more than 10 digits!" })
+    .refine(
+      (value) => {
+        if (value) {
+          return phoneRegExp.test(value);
+        }
+        return true;
+      },
+      { message: "Phone number is not valid!" }
+    )
+    .refine(
+      (value) => {
+        if (value) {
+          return value.length === 10;
+        }
+        return true;
+      },
+      { message: "Phone Number must be exactly 10 digits!" }
+    )
+    .optional(),
 });
-
