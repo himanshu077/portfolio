@@ -6,12 +6,15 @@ import Input from './ui/input';
 import Label from './ui/label';
 import Textarea from './ui/textarea';
 import { Caption, Heading } from '../components/ui/typography';
-import siteConfig from '../config/site';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { contactSubmissionSchema } from '../lib/validations/contact-submission';
+import { useContext } from 'react';
+import { PortfolioContext } from '../context/protfolioContext';
 
 function ContactForm() {
+  const portfolioData = useContext(PortfolioContext);
+  const data = portfolioData && portfolioData.website ? portfolioData.website : "";
   const {
     register,
     handleSubmit,
@@ -21,6 +24,34 @@ function ContactForm() {
     mode: 'onTouched',
   });
 
+  // const sendEmail = async () => {
+  //   try {
+  //     const payload = {
+  //       "email": "himanshukumar077@gmail.com",
+  //       "subject": "hello mail",
+  //       "body": "test mail body"
+  //     };
+  
+  //     const response = await fetch("https://my9h84b2f9.execute-api.ap-south-1.amazonaws.com/default/sendMail", {
+  //       method: 'POST',
+  //       headers: {
+  //         'Authorization': `Bearer ${token}`,
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify(payload)
+  //     });
+  //     if (response.ok) {
+  //       const responseData = await response.json();
+  //       console.log(responseData);
+  //     } else {
+  //       const errorData = await response.json();
+  //       throw new Error(errorData.message || 'Failed to send email');
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+  
   return isSubmitSuccessful ? (
     <div>
       <Caption>Successful</Caption>
@@ -96,14 +127,14 @@ function ContactForm() {
         <div className="flex max-sm:flex-col-reverse max-sm:gap-y-6 sm:items-center sm:justify-between">
           <a
             className="inline-flex items-center text-neutrals-300 transition-colors hover:text-neutrals-50 focus-visible:text-neutrals-50"
-            href={`mailto:${siteConfig.email}`}
+            href={`mailto:${data.email}`}
             title="Hit me up"
           >
             <Icons.Envelope
               aria-hidden="true"
               className="me-2 inline size-5"
             />
-            {siteConfig.email}
+            {data.email}
           </a>
           <Button
             type="submit"
@@ -114,12 +145,6 @@ function ContactForm() {
               aria-hidden
               className="ms-2 inline opacity-70 group-enabled:hidden"
             >
-              {/* <Ring
-                size={20}
-                lineWeight={5}
-                speed={2}
-                color="currentColor"
-              /> */}
             </div>
             <Icons.Rocket
               aria-hidden

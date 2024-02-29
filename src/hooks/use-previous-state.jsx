@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-function usePreviousState(initialState, state) {
-    const [stateTuple, setStateTuple] = useState([initialState, state]);
+function usePreviousState(initialPreviousState, state) {
+    const [stateTuple, setStateTuple] = useState([initialPreviousState, state]);
 
     useEffect(() => {
         setStateTuple((previousState) => [previousState[1], state]);

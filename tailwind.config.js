@@ -26,13 +26,13 @@ module.exports = {
                 0.5: '0.5px',
             },
             minHeight: {
-                screen: ['100vh', '100svh'],
+                screen: ['100vh', '100vh'],
             },
             maxHeight: {
-                screen: ['100vh', '100svh'],
+                screen: ['100vh', '100vh'],
             },
             height: {
-                screen: ['100vh', '100svh'],
+                screen: ['100vh', '100vh'],
             },
             backgroundImage: {
                 'radial-highlight':

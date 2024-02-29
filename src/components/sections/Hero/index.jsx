@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import Container from "../../ui/container"
 import Button from "../../ui/button"
 import GridBackground from "../../GridBackground"
-import { PortfolioContext } from "../../../Context"
+import { PortfolioContext } from "../../../context/protfolioContext"
 
 
 const Hero = () => {
@@ -19,9 +19,9 @@ const Hero = () => {
                 <div className="flex flex-col items-center justify-center">
                     <h1
                         id="hero-heading"
-                        className="text-balance text-center text-4xl/tight font-bold text-neutrals-50 sm:text-5xl/tight md:text-7xl lg:text-8xl/tight"
+                        className="text-balance text-center text-4xl/tight font-bold text-primary sm:text-5xl/tight md:text-7xl lg:text-8xl/tight"
                     >
-                        {data ? data.landing_page.title : ''}
+                        {data ? data.landing_page.about.title : ''}
                     </h1>
                     <div className="mt-12 flex items-stretch gap-x-6 gap-y-3 max-sm:flex-col sm:items-center">
                         <Button

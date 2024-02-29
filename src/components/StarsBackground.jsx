@@ -9,6 +9,7 @@ function StarsBackground() {
 
   return (
     <Particles
+      // Explanation of particles configuration options
       options={{
         particles: {
           number: {

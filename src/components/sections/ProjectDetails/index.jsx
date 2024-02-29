@@ -4,26 +4,26 @@ import Button from '../../ui/button';
 import Image from '../../ui/image';
 import Icons from '../../ui/icons';
 import { formatDate } from '../../../lib/utils';
-import { PortfolioContext } from "../../../Context";
+import { PortfolioContext } from '../../../context/protfolioContext';
 
 const ProjectDetails = () => {
   const portfolioData = useContext(PortfolioContext);
-  const projects = portfolioData && portfolioData.projects ? portfolioData.projects : [];
+  const projects = portfolioData && portfolioData.projects ? portfolioData.projects.filter(project => project.enabled) : [];
 
   return (
     <div>
-      {projects?.map((project) => (
+      {projects.map((project) => (
         <section
           aria-labelledby="project-details-heading"
           className="relative flex min-h-screen w-full bg-neutrals-900 py-[14vh] after:absolute after:inset-0 after:h-full after:w-full after:bg-gradient-to-t after:from-neutrals-900 after:to-neutrals-900/60"
           key={project.id}
         >
           <Image
-            alt={project.poster.alt}
+            alt={project?.poster?.alt || project?.image}
             loading="eager"
             decoding="sync"
             className="absolute inset-0 h-full w-full object-cover object-center"
-            src={project.poster.src}
+            src={project?.poster?.src || project?.image}
           />
           <Container>
             <div className="relative z-10 flex h-full flex-col justify-end">
@@ -56,6 +56,11 @@ const ProjectDetails = () => {
               {project.tags && Array.isArray(project.tags) && (
                 <p className="text-xs text-neutrals-50/90 lg:text-sm">
                   {project.tags.join(', ')}
+                </p>
+              )}
+              {project.technologies && Array.isArray(project.technologies) && (
+                <p className="text-xs text-neutrals-50/90 lg:text-sm">
+                  Technologies Used :- <span>{project.technologies.join(', ')}</span>
                 </p>
               )}
               <hr className="mb-8 mt-4 h-px border-0 bg-gradient-to-r from-neutrals-50/40 to-transparent" />

@@ -4,11 +4,11 @@ import Container from "../../ui/container";
 import { Caption, Heading, Paragraph } from "../../ui/typography";
 import TestimonialCards from "../../TestimonialCards";
 import StarsBackground from "../../StarsBackground";
-import { PortfolioContext } from "../../../Context";
+import { PortfolioContext } from "../../../context/protfolioContext";
 
 const CustomerStories = () => {
     const portfolioData = useContext(PortfolioContext);
-    const customerStoriesData = portfolioData && portfolioData.testimonials ? portfolioData.testimonials : [];
+    const customerStoriesData = portfolioData && portfolioData.testimonials ? portfolioData.testimonials.filter(testimonial => testimonial.enabled) : [];
 
     return (
         <Section
@@ -31,7 +31,7 @@ const CustomerStories = () => {
             <div className="mask-inline-faded group !flex !w-full overflow-x-hidden">
                 <ul className="group-hover:play-state-paused motion-reduce:play-state-paused !flex animate-marquee">
                     {customerStoriesData.map(testimonial => (
-                        <TestimonialCards key={testimonial.id} testimonial={testimonial} />
+                        <TestimonialCards key={testimonial.id} testimonial={testimonial}/>
                     ))}
                 </ul>
                 <ul

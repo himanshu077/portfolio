@@ -3,11 +3,11 @@ import Container from '../../ui/container'
 import { Caption, Heading } from "../../ui/typography"
 import ProjectCarousel from '../../ProjectCarousle'
 import Section from '../../ui/section'
-import { PortfolioContext } from "../../../Context";
+import { PortfolioContext } from "../../../context/protfolioContext";
 
 const Work = () => {
     const portfolioData = useContext(PortfolioContext);
-    const projects = portfolioData && portfolioData.categories ? portfolioData.categories : [];
+    const projects = portfolioData && portfolioData.projects ? portfolioData.projects.filter(category => category.enabled) : [];
     return (
         <Section
             id="work"

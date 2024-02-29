@@ -82,12 +82,16 @@ function MobileNavigationToggle({
 }) {
     const [scope, animate] = useAnimate();
 
+    // useEffect hook to trigger animation when isOpen changes
     useEffect(() => {
+        // Using useAnimate hook to get scope and animate function
         void animate([
+            // Animation for the top toggle bar
             [
                 'path[data-toggle-bar-top]',
                 {
-                    y: isOpen ? ['0rem', '-0.325rem', '-0.325rem'] : ['-0.325rem', '-0.325rem', '0rem'],
+                    // Setting animation properties based on isOpen state
+                    y: isOpen ? ['0rem', '-0.325rem', '-0.325rem'] : ['-0.325rem', '-0.325rem', '0rem'], // Animation for vertical movement
                     d: isOpen
                         ? [
                             'M3,17.25C3,16.839 3.339,16.5 3.75,16.5L20.25,16.5C20.661,16.5 21,16.839 21,17.25C21,17.661 20.661,18 20.25,18L3.75,18C3.339,18 3,17.661 3,17.25Z',
@@ -100,17 +104,20 @@ function MobileNavigationToggle({
                             'M3,17.25C3,16.839 3.339,16.5 3.75,16.5L20.25,16.5C20.661,16.5 21,16.839 21,17.25C21,17.661 20.661,18 20.25,18L3.75,18C3.339,18 3,17.661 3,17.25Z',
                         ],
                 },
-                { duration: 0.3 },
+                { duration: 0.3 }, // Animation duration
             ],
+            // Animation for the middle toggle bar
             [
                 'path[data-toggle-bar-middle]',
                 { opacity: isOpen ? [1, 1, 0] : [0, 0, 1] },
                 { at: '<', duration: 0.3 },
             ],
+            // Animation for the bottom toggle bar
             [
                 'path[data-toggle-bar-bottom]',
                 {
-                    y: isOpen ? ['0rem', '0.325rem', '0.325rem'] : ['0.325rem', '0.325rem', '0rem'],
+                    // Setting animation properties based on isOpen state
+                    y: isOpen ? ['0rem', '0.325rem', '0.325rem'] : ['0.325rem', '0.325rem', '0rem'], // Animation for vertical movement
                     d: isOpen
                         ? [
                             'M3,6.75C3,6.339 3.339,6 3.75,6L20.25,6C20.661,6 21,6.339 21,6.75C21,7.161 20.661,7.5 20.25,7.5L3.75,7.5C3.339,7.5 3,7.161 3,6.75Z',

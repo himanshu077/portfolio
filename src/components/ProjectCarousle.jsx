@@ -13,10 +13,12 @@ import {
 import {
   Fragment,
   useCallback,
+  useContext,
   useEffect,
   useRef,
   useState,
 } from 'react';
+import { PortfolioContext } from '../context/protfolioContext';
 
 function ProjectSlide({
   project,
@@ -35,7 +37,6 @@ function ProjectSlide({
     [slideOffsetLeft + slideWidth, slideOffsetLeft - carouselWidth],
     ['0%', '100%'],
   );
-
   const updateSlideConstraints = useCallback(() => {
     if (!slideRef.current) return;
 
@@ -66,7 +67,7 @@ function ProjectSlide({
       className="relative aspect-[2/3] w-[clamp(18rem,42vmin,26rem)] overflow-hidden rounded-md"
     >
       <a
-        href={`/project/${project.name}`}
+        href={`/project/${project.id}`}
         aria-label={isDisabled ? undefined : `Show ${project.name} project details`}
         data-astro-prefetch
         aria-disabled={isDisabled}
@@ -107,8 +108,8 @@ function ProjectSlide({
           )}
         </article>
         <motion.img
-          src={project.image?.src || project.image ||''}
-          alt={project.image?.alt || project.name || ''}
+          src={project.poster?.src || project.image || ''}
+          alt={project.poster?.alt || project.name || ''}
           loading="lazy"
           decoding="async"
           className={cn(
@@ -124,10 +125,8 @@ function ProjectSlide({
   );
 }
 
-const projectTagFilters = ['Website', 'Graphic design', 'Archive'];
-const wildcardFilter = 'Archive';
 
-function ProjectFiltersSelect({ selectedFiltersState }) {
+function ProjectFiltersSelect({ selectedFiltersState, projectTagFilters }) {
   const [selectedFilters, setSelectedFilters] = selectedFiltersState;
 
   return (
@@ -193,7 +192,6 @@ function ProjectFiltersSelect({ selectedFiltersState }) {
 
 const CAROUSEL_SLIDES_GAP = 24;
 
-
 function ProjectCarousel({ projects }) {
   const carouselWrapperRef = useRef(null);
   const carouselRef = useRef(null);
@@ -205,8 +203,11 @@ function ProjectCarousel({ projects }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState(null);
-  const [selectedFilters, setSelectedFilters] = useState(['Website']);
-
+  const portfolioData = useContext(PortfolioContext);
+  const categories = portfolioData && portfolioData.categories ? portfolioData.categories.filter(category => category.enabled) : [];
+  const projectTagFilters = categories.map(category => category.name);
+  const wildcardFilter = 'Web Development';
+  const [selectedFilters, setSelectedFilters] = useState([...projectTagFilters]);
   const updateCarouselConstraints = useCallback(() => {
     if (
       !carouselWrapperRef.current ||
@@ -298,6 +299,18 @@ function ProjectCarousel({ projects }) {
     [dragStart, isDragging],
   );
 
+  const filteredProjects = projects.filter((project) => {
+    const isAnyProjectTagFiltered = selectedFilters.some((selectedFilter) =>
+      project.category_id?.includes(selectedFilter),
+    );
+    if (isAnyProjectTagFiltered) return true;
+
+    const isWildcardFilterEnabledAndNoProjectTagFiltered =
+      selectedFilters.includes(wildcardFilter) &&
+      !project.category_id?.some((projectTag) => projectTagFilters.includes(projectTag));
+    return isWildcardFilterEnabledAndNoProjectTagFiltered;
+  });
+
   return (
     <div
       ref={carouselWrapperRef}
@@ -305,7 +318,7 @@ function ProjectCarousel({ projects }) {
     >
       <Container>
         <div className="flex items-center justify-center">
-          <ProjectFiltersSelect selectedFiltersState={[selectedFilters, setSelectedFilters]} />
+        <ProjectFiltersSelect selectedFiltersState={[selectedFilters, setSelectedFilters]} projectTagFilters={projectTagFilters} />
         </div>
       </Container>
       <div className="relative py-8">
@@ -354,6 +367,7 @@ function ProjectCarousel({ projects }) {
                 project={project}
                 index={index}
                 currentIndex={currentSlide}
+                isDisabled={!filteredProjects.includes(project)}
                 isDragging={isDragging}
                 carouselWidth={carouselWidth}
                 scrollPosition={scrollPosition}
