@@ -142,7 +142,7 @@ function ProjectFiltersSelect({ selectedFiltersState, projectTagFilters }) {
       {({ open }) => (
         <>
           <Listbox.Button className="flex w-full items-center justify-between rounded-sm border border-neutrals-600 bg-radial-highlight px-4 py-2 text-sm text-neutrals-100">
-            {selectedFilters
+            {(selectedFilters ?? [])
               .sort((a, b) => projectTagFilters.indexOf(a) - projectTagFilters.indexOf(b))
               .map((selectedFilter) => selectedFilter)
               .join(', ')}
@@ -207,7 +207,7 @@ function ProjectCarousel({ projects }) {
   const categories = portfolioData && portfolioData.categories ? portfolioData.categories.filter(category => category.enabled) : [];
   const projectTagFilters = categories.map(category => category.name);
   const wildcardFilter = 'Web Development';
-  const [selectedFilters, setSelectedFilters] = useState([...projectTagFilters]);
+  const [selectedFilters, setSelectedFilters] = useState(['Web Development']);
   const updateCarouselConstraints = useCallback(() => {
     if (
       !carouselWrapperRef.current ||
@@ -300,16 +300,17 @@ function ProjectCarousel({ projects }) {
   );
 
   const filteredProjects = projects.filter((project) => {
+    const projectCategories = Array.isArray(project.category_id) ? project.category_id : [project.category_id];
     const isAnyProjectTagFiltered = selectedFilters.some((selectedFilter) =>
-      project.category_id?.includes(selectedFilter),
+      projectCategories.includes(selectedFilter)
     );
     if (isAnyProjectTagFiltered) return true;
-
+  
     const isWildcardFilterEnabledAndNoProjectTagFiltered =
       selectedFilters.includes(wildcardFilter) &&
-      !project.category_id?.some((projectTag) => projectTagFilters.includes(projectTag));
+      !projectCategories.some((projectTag) => projectTagFilters.includes(projectTag));
     return isWildcardFilterEnabledAndNoProjectTagFiltered;
-  });
+  });  
 
   return (
     <div
@@ -318,7 +319,7 @@ function ProjectCarousel({ projects }) {
     >
       <Container>
         <div className="flex items-center justify-center">
-        <ProjectFiltersSelect selectedFiltersState={[selectedFilters, setSelectedFilters]} projectTagFilters={projectTagFilters} />
+          <ProjectFiltersSelect selectedFiltersState={[selectedFilters, setSelectedFilters]} projectTagFilters={projectTagFilters} />
         </div>
       </Container>
       <div className="relative py-8">

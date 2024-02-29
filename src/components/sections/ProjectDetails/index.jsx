@@ -92,7 +92,7 @@ const ProjectDetails = () => {
                 )}
               </div>
             </div>
-            {project.images && project.images.length > 0 && (
+            {project.image_gallery && project.image_gallery.length > 0 && (
               <a
                 href="#project-gallery"
                 title="See project breakdown"
@@ -103,6 +103,26 @@ const ProjectDetails = () => {
               </a>
             )}
           </Container>
+          {
+            project.image_gallery.length > 0 && (
+              <section
+                id="project-gallery"
+                aria-label="Project Gallery"
+                className="bg-neutrals-900"
+              >
+                <div className="mx-auto max-w-7xl">
+                  {project.image_gallery.map((image, index) => (
+                    <Image
+                      key={index}
+                      alt={image.alt}
+                      src={image.src}
+                      className="w-full"
+                    />
+                  ))}
+                </div>
+              </section>
+            )
+          }
         </section>
       ))}
     </div>
