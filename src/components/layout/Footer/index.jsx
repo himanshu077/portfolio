@@ -26,7 +26,15 @@ const primaryLinks = [
   {
     label: 'Source code',
     href: '/#source-code',
-  }
+  },
+  {
+    label: 'Services',
+    href: '/#services',
+  },
+  {
+    label: 'Blog',
+    href: '/blog',
+  },
 ];
 
 const secondaryLinks = [
