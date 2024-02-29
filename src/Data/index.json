@@ -1,0 +1,363 @@
+{
+  "website": {
+    "title": "Himanshu's Portfolio",
+    "description": "Full Stack Developer with 8 year experience",
+    "bio": "My name is Himanshu, I'm a Full Stack ReactJS Developer. Currently I'm working as freelancer.",
+    "contactmessage": "Get in touch with me to receive further details, get coached or anything else.",
+    "email": "himanshu064@gmail.com",
+    "phone": "+91 93547-21082",
+    "keywords": [
+      "web design",
+      "web development",
+      "graphic design",
+      "branding",
+      "photography",
+      "illustration",
+      "motion design",
+      "3d design",
+      "ui/ux design",
+      "app design",
+      "print design",
+      "packaging design"
+    ],
+    "address": {
+      "street": "Pragati vihar",
+      "city": "Amabala Cantt",
+      "state": "Haryana",
+      "zip": "133001"
+    },
+    "website": "https://himanshu-a31e2.web.app",
+    "resume": {
+      "downloadLink": "https://himanshu-a31e2.web.app",
+      "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
+      "education": [
+        {
+          "school": "Kuk university",
+          "degree": "Bachelor's Degree, Computer Science",
+          "graduated": "July 2012",
+          "description": "Graduated with Distinction"
+        }
+      ],
+      "work": [
+        {
+          "company": "Netweb technologies",
+          "title": "Full stack developer",
+          "years": "Feb 2020 - Present",
+          "description": ""
+        },
+        {
+          "company": "Orem technology Private Limited",
+          "title": "Senior Software Engineer",
+          "years": "Feb 2016 - Feb 2020",
+          "description": ""
+        },
+        {
+          "company": "Macwill information system",
+          "title": "Software Engineer",
+          "years": "Aug 2012 - Jan 2016",
+          "description": ""
+        }
+      ],
+      "skills": [
+        {
+          "name": "ReactJs",
+          "level": "100%"
+        },
+        {
+          "name": "Angular",
+          "level": "100%"
+        },
+        {
+          "name": "Git",
+          "level": "75%"
+        },
+        {
+          "name": "JavaScript",
+          "level": "100%"
+        },
+        {
+          "name": "MongoDB",
+          "level": "80%"
+        }
+      ]
+    },
+    "landing_page": {
+      "hero_image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "about": {
+        "title": "Web Development and Design Studio from the Future",
+        "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+        "heading": [
+          "Developer",
+          "Graphic Designer",
+          "UI/UX Designer",
+          "App Designer"
+        ],
+        "description": "I'm a passionate designer and developer who loves to create beautiful and functional websites and applications. I have a strong eye for detail and a keen understanding of user experience. I'm always looking to learn and improve my skills and abilities."
+      }
+    }
+  },
+  "testimonials": [
+    {
+      "id": "1",
+      "quote": "Great to work with Himanshu! Himanshu is very responsive and skilled professional designer, who enriches your views with creativity! Will sure work with Himanshu again!",
+      "name": "William Smith",
+      "designation": "CEO of Abc Corp",
+      "avatar": "https://avatar.iran.liara.run/public/1",
+      "enabled": true
+    },
+    {
+      "id": "2",
+      "quote": "Himanshu is a great designer. He is very easy to work with and very responsive. I would highly recommend him.",
+      "name": "David Smith",
+      "designation": "Visual Artist & Designer",
+      "avatar": "https://avatar.iran.liara.run/public/2",
+      "enabled": true
+    },
+    {
+      "id": "3",
+      "quote": "He understood and executed our vision with precision and creativity. Always up to hire him again",
+      "name": "Corey Anderson",
+      "designation": "Co-Founder of Aviana Developmenet",
+      "avatar": "https://avatar.iran.liara.run/public/3",
+      "enabled": true
+    },
+    {
+      "id": "4",
+      "quote": "We placed our complete trust in Himanshu's hands, which more than paid off as our expectations were exceeded. We are super happy with the result.",
+      "name": "Sonja Dettmann",
+      "designation": "Founders of Shoppisticated & Contentary",
+      "avatar": "https://avatar.iran.liara.run/public/4",
+      "enabled": true
+    },
+    {
+      "id": "5",
+      "quote": "With his high level of professionalism and intuitive sense of digital design, Himanshu has created an incredibly customized website branding for my business that is simply mind blowing.",
+      "name": "Steve Smith",
+      "designation": "CEO of XYZ Corp",
+      "avatar": "https://avatar.iran.liara.run/public/5",
+      "enabled": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Web Development",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "2",
+      "name": "Mobile App Development",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "3",
+      "name": "Static Website",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "4",
+      "name": "UI/UX Design",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
+      "id": "5",
+      "name": "Full Stack Web Development",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "category_id": "1",
+      "enabled": true,
+      "name": "Bidmii",
+      "tags": ["Website"],
+      "description": "Bidmii helps you find local contractors with verified reviews, get multiple free quotes, and holds payments in trust.",
+      "project_link": "",
+      "live_link": "https://www.bidmii.com",
+      "date": "2020-01-01",
+      "poster": {
+        "id": "123",
+        "src": "https://assets-global.website-files.com/60048f7343094628c841c251/654e532bbf941aa39c5d3dc4_6544faaa2d192f0b9a7194e8_home_page_hero_1200x800.webp",
+        "alt": ""
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["React", "Material UI", "Axios", "Firebase"]
+    },
+    {
+      "id": "2",
+      "category_id": "2",
+      "enabled": true,
+      "name": "Expense Calc",
+      "description": "Expense Calc is a simple and easy to use expense tracking application. It is designed to be intuitive and easy to use, and it is perfect for people who want to keep track of their spending.",
+      "project_link": "https://github.com/himanshu077/expense-calc",
+      "live_link": "",
+      "tags": ["marketing", "flutter", "branding"],
+      "date": "2020-01-01",
+      "poster": {
+        "id": "123",
+        "src": "https://allthatsaas.com/wp-content/uploads/2020/06/best-expense-tracker-apps-spendee.png",
+        "alt": ""
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Dart", "Flutter", "UI"]
+    },
+    {
+      "id": "3",
+      "category_id": "2",
+      "enabled": true,
+      "name": "BMI Calculator",
+      "description": "BMI Calculator is a simple and easy to use application that helps you calculate your Body Mass Index (BMI).",
+      "project_link": "https://github.com/himanshu077/bmi-calculator",
+      "live_link": "",
+      "tags": ["marketing", "flutter", "branding"],
+      "date": "2020-01-01",
+      "poster": {
+        "id": "123",
+        "src": "https://vitalityweightlossinstitute.com/wp-content/uploads/2023/05/bmi.png",
+        "alt": ""
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Dart", "Flutter", "UI"]
+    },
+    {
+      "id": "4",
+      "category_id": "5",
+      "enabled": true,
+      "name": "Angular Chat",
+      "description": "This is a real-time chat application built using Angular for the frontend, with a Node.js backend using Socket.io for WebSocket communication. The app allows users to join different chat rooms, exchange messages, and engage in conversations seamlessly.",
+      "project_link": "https://github.com/himanshu077/Angular-Chat",
+      "live_link": "",
+      "tags": ["angular", "website", "chat application", "socket", "backend"],
+      "date": "2020-01-01",
+      "poster": {
+        "id": "123",
+        "src": "https://img.freepik.com/premium-vector/cell-phone-sms-email-communications-seamless-pattern_738121-441.jpg",
+        "alt": ""
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Angular", "Node.js", "Socket.io", "WebSocket"]
+    },
+    {
+      "id": "5",
+      "category_id": "5",
+      "enabled": true,
+      "name": "Angular Postman",
+      "description": "Angular Postman is a purpose-built project for efficient API testing, utilizing Angular CLI.",
+      "project_link": "https://github.com/himanshu077/Angular-Postman",
+      "live_link": "",
+      "tags": ["angular", "website", "postman", "api testing"],
+      "date": "2020-01-01",
+      "poster": {
+        "id": "123",
+        "src": "https://blog.postman.com/wp-content/uploads/2014/07/logo.png",
+        "alt": ""
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Angular", "API", "Testing"]
+    },
+    {
+      "id": "6",
+      "category_id": "2",
+      "enabled": true,
+      "name": "Quiz Flutter",
+      "description": "Quiz app is a mobile application that allows users to take quizzes on various topics and subjects. The app is built using Flutter, and it is designed to be user-friendly and intuitive.",
+      "project_link": "https://github.com/himanshu077/Quiz-Flutter",
+      "live_link": "",
+      "tags": ["flutter", "mobile application"],
+      "date": "2020-01-01",
+      "poster": {
+        "id": "123",
+        "src": "https://img.freepik.com/premium-vector/quiz-seamless-pattern-doodle-style-vector-illustration-back-school-background_501826-310.jpg",
+        "alt": ""
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["Dart", "Flutter"]
+    },
+    {
+      "id": "7",
+      "category_id": "3",
+      "enabled": true,
+      "name": "React URL Shortner",
+      "description": "React URL Shortener is a simple and easy to use application that helps you shorten long URLs. Perfect for people who want to shorten their URLs.",
+      "project_link": "https://github.com/himanshu077/react-url-shortener",
+      "live_link": "https://react-url-shortener-mu.vercel.app/",
+      "tags": ["react", "ui", "ux", "design", "static website"],
+      "date": "2020-01-01",
+      "poster": {
+        "id": "123",
+        "src": "https://easydmarc.com/blog/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/06/URL-Shorteners_-Pros-and-Cons.jpg.webp",
+        "alt": ""
+      },
+      "image_gallery": [
+        { "id": "1", "src": "", "alt": "" },
+        { "id": "2", "src": "", "alt": "" },
+        { "id": "3", "src": "", "alt": "" }
+      ],
+      "technologies": ["React", "Material UI", "Tailwind CSS", "Vercel"]
+    },
+    {
+      "id": "8",
+      "name": "React Monorepo",
+      "tags": "Website",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    }
+  ],
+  "socials": {
+    "github": {
+      "url": "https://www.facebook.com/himanshu064",
+      "label": "View Github Profile",
+      "className": "fa-brands fa-github"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/himanshu-kumar-76289417/",
+      "label": "View Linked Profile",
+      "className": "fa-brands fa-linkedin"
+    },
+    "facebook": {
+      "url": "https://www.facebook.com/himanshu064",
+      "label": "View Facebook Profile",
+      "className": "fa-brands fa-facebook"
+    },
+    "upwork": {
+      "url": "https://www.upwork.com/fl/himanshu077",
+      "label": "View UpWork Profile",
+      "className": "fa-brands fa-upwork"
+    },
+    "freelancer": {
+      "url": "https://www.freelancer.in/u/himanshu077",
+      "label": "View Freelancer Profile",
+      "className": ""
+    }
+  }
+}
