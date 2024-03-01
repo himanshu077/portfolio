@@ -95,13 +95,13 @@
         "description": "I'm a passionate designer and developer who loves to create beautiful and functional websites and applications. I have a strong eye for detail and a keen understanding of user experience. I'm always looking to learn and improve my skills and abilities."
       }
     },
-    "enable_section":{
-      "about":true,
-      "services":true,
-      "work":true, 
-      "sourceCode":true,
-      "customerStories":true,
-      "contact":true
+    "enable_section": {
+      "about": true,
+      "services": true,
+      "work": true,
+      "sourceCode": true,
+      "customerStories": true,
+      "contact": true
     }
   },
   "testimonials": [
@@ -366,6 +366,98 @@
       "url": "https://www.freelancer.in/u/himanshu077",
       "label": "View Freelancer Profile",
       "className": ""
+    }
+  },
+  "services": {
+    "webApplicationDevelopment": {
+      "serviceTitle": "Web Application Development",
+      "servicePrice": "Individual price",
+      "serviceDescription": "We specialize in crafting high-quality web applications tailored to meet your business needs. Our team of experienced developers will work closely with you to bring your vision to life. Whether you need a custom solution from scratch or want to enhance an existing application, we've got you covered.",
+      "serviceBenefits": [
+        "Customized solutions tailored to your business requirements.",
+        "Responsive design for optimal performance across all devices.",
+        "User-friendly interface to enhance user experience.",
+        "Scalable architecture to accommodate future growth.",
+        "Robust security measures to protect your data and users.",
+        "Ongoing support and maintenance to ensure smooth operation.",
+        "Additional features and integrations available upon request."
+      ],
+      "addons": [
+        {
+          "name": "Custom API Integration"
+        },
+        {
+          "name": "E-commerce Functionality"
+        },
+        {
+          "name": "SEO Optimization"
+        }
+      ]
+    },
+    "webSiteDevelopment": {
+      "serviceTitle": "Website",
+      "servicePrice": "2000",
+      "serviceDescription": "Our website development service is designed to create stunning and functional websites that resonate with your audience. From sleek designs to seamless navigation, we ensure your online presence stands out.",
+      "serviceBenefits": [
+        "Customized website design tailored to your brand identity.",
+        "Responsive layout optimized for all devices and screen sizes.",
+        "User-friendly interface for effortless navigation and engagement.",
+        "Integration of essential features like contact forms and social media links.",
+        "SEO-friendly structure to enhance visibility and search engine ranking.",
+        "Flexible and scalable solutions to accommodate future growth and expansion."
+      ],
+      "addons": [
+        {
+          "name": "Premium Hosting Plan",
+          "price": "10"
+        },
+        {
+          "name": "E-commerce Functionality",
+          "price": "200"
+        },
+        {
+          "name": "Advanced SEO Package",
+          "price": "$500"
+        },
+        {
+          "name": "Content Management System",
+          "price": "100"
+        }
+      ],
+      "notice": "Prices for the addOns may change based on the project scope and requirement"
+    },
+    "shopify": {
+      "serviceTitle": "Shopify Theme Customization",
+      "servicePrice": "2300",
+      "serviceDescription": "Enhance your online store with our Shopify theme customization service. We'll tailor your Shopify theme to match your brand identity and optimize it for better user experience and conversions.",
+      "serviceBenefits": [
+        "Customized Shopify theme design to reflect your brand.",
+        "Optimized for improved user experience and sales.",
+        "Responsive layout for seamless browsing on all devices.",
+        "Integration of essential e-commerce features.",
+        "SEO-friendly setup for better search engine visibility.",
+        "Ongoing support and maintenance."
+      ],
+      "addons": [
+        {
+          "name": "Premium Theme Package",
+          "price": "500"
+        },
+        {
+          "name": "Custom Feature Integration",
+          "price": "850"
+        },
+        {
+          "name": "Advanced SEO Optimization",
+          "price": "250"
+        }
+      ],
+      "notice": "Prices for the addOns may change based on the project scope and requirement"
+    },
+    "custom": {
+      "serviceTitle": "Custom",
+      "servicePrice": "Individual price",
+      "serviceDescription": "Our custom service offers tailor-made solutions crafted specifically to meet your unique requirements. We prioritize understanding your needs and delivering bespoke solutions that exceed your expectations. Whether you're looking to build from scratch or enhance existing functionalities, our team is here to bring your vision to life."
     }
   }
 }
