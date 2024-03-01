@@ -192,7 +192,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://assets-global.website-files.com/60048f7343094628c841c251/654e532bbf941aa39c5d3dc4_6544faaa2d192f0b9a7194e8_home_page_hero_1200x800.webp",
+        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/9aff6252a30d1b08e6b9e143f111b907c3b8a3b4/src/assets/Images/BIDMI.png",
         "alt": ""
       },
       "image_gallery": [
@@ -236,7 +236,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/22/e2/08/22e208f5-6a72-a1f7-a92e-7eb851e19893/d7c8ffd0-dd6a-4a01-90e7-d46a1e285a88_Screen3.png/200x0w.jpg",
+        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/9aff6252a30d1b08e6b9e143f111b907c3b8a3b4/src/assets/Images/BMI.png",
         "alt": ""
       },
       "image_gallery": [
@@ -249,7 +249,7 @@
     {
       "id": "4",
       "category_id": "5",
-      "enabled": true,
+      "enabled": false,
       "name": "Angular Chat",
       "description": "This is a real-time chat application built using Angular for the frontend, with a Node.js backend using Socket.io for WebSocket communication. The app allows users to join different chat rooms, exchange messages, and engage in conversations seamlessly.",
       "project_link": "https://github.com/himanshu077/Angular-Chat",
@@ -271,7 +271,7 @@
     {
       "id": "5",
       "category_id": "5",
-      "enabled": true,
+      "enabled": false,
       "name": "Angular Postman",
       "description": "Angular Postman is a purpose-built project for efficient API testing, utilizing Angular CLI.",
       "project_link": "https://github.com/himanshu077/Angular-Postman",
@@ -324,7 +324,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://easydmarc.com/blog/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/06/URL-Shorteners_-Pros-and-Cons.jpg.webp",
+        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/9aff6252a30d1b08e6b9e143f111b907c3b8a3b4/src/assets/Images/BMI.png",
         "alt": ""
       },
       "image_gallery": [
@@ -339,7 +339,7 @@
       "name": "React Monorepo",
       "tags": "Website",
       "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
-      "enabled": true
+      "enabled": false
     }
   ],
   "socials": {
