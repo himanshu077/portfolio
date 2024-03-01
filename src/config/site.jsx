@@ -8,13 +8,7 @@ const siteConfig = {
     email: 'himanshukumar077@gmail.com',
     url: 'https://google.com',
     links: {
-        sourcecode: 'https://sourcecode.com',
-        github: 'https://github.com',
-        discord: 'https://discord.com',
-        instagram: 'https://instagram.com',
-        linkedin: 'https://linkedin.com',
-        dribbble: 'https://dribbble.com',
-        behance: 'https://behance.com',
+        github: 'https://github.com/himanshu077/',
     },
 };
 

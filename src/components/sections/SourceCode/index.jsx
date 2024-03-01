@@ -21,7 +21,7 @@ const SourceCode = () => {
           </Paragraph>
           <Button
             as="a"
-            href={siteConfig.links.sourcecode}
+            href={siteConfig.links.github}
             rel="noreferrer"
             target="_blank"
             foreground="error"

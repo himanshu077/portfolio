@@ -6,36 +6,7 @@ import Container from '../../ui/container';
 import Icons from '../../ui/icons';
 import { useContext } from 'react';
 import { PortfolioContext } from "../../../context/protfolioContext";
-const primaryLinks = [
-  {
-    label: 'About',
-    href: '/#about',
-  },
-  {
-    label: 'Work',
-    href: '/#work',
-  },
-  {
-    label: 'Customer Stories',
-    href: '/#stories',
-  },
-  {
-    label: 'Contact',
-    href: '/#contact',
-  },
-  {
-    label: 'Source code',
-    href: '/#source-code',
-  },
-  {
-    label: 'Services',
-    href: '/#services',
-  },
-  {
-    label: 'Blog',
-    href: '/blog',
-  },
-];
+import { cn } from '../../../lib/utils';
 
 // const secondaryLinks = [
 //   {
@@ -99,6 +70,44 @@ function Footer() {
     },
   ]
 
+  const primaryLinks = [
+    {
+      label: 'About',
+      href: '/#about',
+      enable:profileData?.website?.enable_section.about
+    },
+    {
+      label: 'Work',
+      href: '/#work',
+      enable:profileData?.website?.enable_section.work
+    },
+    {
+      label: 'Customer Stories',
+      href: '/#stories',
+      enable:profileData?.website?.enable_section.about
+    },
+    {
+      label: 'Contact',
+      href: '/#contact',
+      enable:profileData?.website?.enable_section.contact
+    },
+    {
+      label: 'Source code',
+      href: '/#source-code',
+      enable:profileData?.website?.enable_section.soucrCode
+    },
+    {
+      label: 'Services',
+      href: '/#services',
+      enable:profileData?.website?.enable_section.customerStories
+    },
+    {
+      label: 'Blog',
+      href: '/blog',
+      enable:profileData?.website?.enable_section.blogs
+    },
+  ];
+
 
   return (
     <footer
@@ -129,7 +138,11 @@ function Footer() {
               key={link.href}
               href={link.href}
               data-astro-prefetch
-              className="text-sm uppercase text-neutrals-300 transition-colors hover:text-neutrals-50 focus-visible:text-neutrals-50"
+              // className="text-sm uppercase text-neutrals-300 transition-colors hover:text-neutrals-50 focus-visible:text-neutrals-50"
+              className={cn(
+                "text-sm uppercase text-neutrals-300 transition-colors hover:text-neutrals-50 focus-visible:text-neutrals-50",
+                !link.enable && "hidden"
+              )}
             >
               {link.label}
             </a>
@@ -166,10 +179,7 @@ function Footer() {
                   target="_blank"
                   className="text-neutrals-300 transition-colors hover:text-neutrals-50 focus-visible:text-neutrals-50"
                 >
-                  <Icon
-                    aria-hidden
-                    className="size-7"
-                  />
+                  <Icon aria-hidden className="size-7" />
                 </a>
               </li>
             ))}
