@@ -1,8 +1,9 @@
-import ServiceCard from '../components/ServiceCard';
-import { motion, useMotionValue } from 'framer-motion';
-import React from 'react';
+import ServiceCard from "../components/ServiceCard";
+import { motion, useMotionValue } from "framer-motion";
+import React from "react";
 
-function ServiceGrid() {
+function ServiceGrid({ services }) {
+  console.log(services, "services");
   const mousePositionX = useMotionValue(0);
   const mousePositionY = useMotionValue(0);
 
@@ -16,148 +17,120 @@ function ServiceGrid() {
       onMouseMove={handleMouseMove}
       className="group grid gap-6 lg:grid-cols-5"
     >
+      {/** web application development */}
       <ServiceCard
         parentMousePositionX={mousePositionX}
         parentMousePositionY={mousePositionY}
         className="lg:col-span-2"
       >
         <div>
-          <ServiceCard.Title>Web application</ServiceCard.Title>
-          <ServiceCard.Price>Individual price</ServiceCard.Price>
+          <ServiceCard.Title>
+            {services.webApplicationDevelopment.serviceTitle}
+          </ServiceCard.Title>
+          <ServiceCard.Price>
+            {services.webApplicationDevelopment.servicePrice}
+          </ServiceCard.Price>
           <ServiceCard.Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in purus mollis,
-            gravida dui imperdiet, tincidunt augue.
-            <br />
-            Let&apos;s dolor sit amet, consectetur adipiscing elit. Vestibulum in purus mollis,
-            vision!
+            {services.webApplicationDevelopment.serviceDescription}
           </ServiceCard.Description>
           <ServiceCard.List>
-            <ServiceCard.List.BenefitListItem>
-              Lorem, ispum, dolor sit amet
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Vestibulum, Aliquam luctus
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              posuere vestibulum
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Etiam pulvinar eget
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>porta dui commodo interdum.</ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Lorem ipsum dolor sit amet, consectetur
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.AddonListItem>
-              Lorem ipsum dolor sit amet, <span className="text-neutrals-400">|</span> consectetur adipiscing
-            </ServiceCard.List.AddonListItem>
+            {services.webApplicationDevelopment.serviceBenefits.map(
+              (benifits, index) => {
+                return (
+                  <ServiceCard.List.BenefitListItem key={index}>
+                    {benifits}
+                  </ServiceCard.List.BenefitListItem>
+                );
+              }
+            )}
+            {services.webApplicationDevelopment.addons.map((addOn, index) => {
+              return (
+                <ServiceCard.List.AddonListItem key={index}>
+                  {addOn.name}
+                </ServiceCard.List.AddonListItem>
+              );
+            })}
           </ServiceCard.List>
         </div>
         <ServiceCard.CallToAction />
       </ServiceCard>
+      {/** website development  */}
       <ServiceCard
         parentMousePositionX={mousePositionX}
         parentMousePositionY={mousePositionY}
         className="lg:col-span-3"
       >
         <div>
-          <ServiceCard.Title>Website</ServiceCard.Title>
+          <ServiceCard.Title>
+            {services.webSiteDevelopment.serviceTitle}
+          </ServiceCard.Title>
           <ServiceCard.Price>
-            $ 1800<span className="text-xl font-normal">*</span>
+            $ {services.webSiteDevelopment.servicePrice}
+            <span className="text-xl font-normal">*</span>
           </ServiceCard.Price>
           <ServiceCard.Description>
-            consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing ― Let&apos;s make it happen!
+            {services.webSiteDevelopment.serviceDescription}
           </ServiceCard.Description>
           <ServiceCard.List>
-            <ServiceCard.List.BenefitListItem>
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Lorem ipsum dolor sit
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.AddonListItem>
-              Hosting (lorem ispum dolor) sit <span className="text-neutrals-400">|</span> $400
-            </ServiceCard.List.AddonListItem>
-            <ServiceCard.List.AddonListItem>
-              consectetur adipiscing  <span className="text-neutrals-400">|</span> $1150
-            </ServiceCard.List.AddonListItem>
-            <ServiceCard.List.AddonListItem>
-              consectetur adipiscing  <span className="text-neutrals-400">|</span> $1400
-            </ServiceCard.List.AddonListItem>
-            <ServiceCard.List.AddonListItem>
-              consectetur <span className="text-neutrals-400">|</span> $350
-            </ServiceCard.List.AddonListItem>
+            {services.webSiteDevelopment.serviceBenefits.map(
+              (benifits, index) => {
+                return (
+                  <ServiceCard.List.BenefitListItem key={index}>
+                    {benifits}
+                  </ServiceCard.List.BenefitListItem>
+                );
+              }
+            )}
+            {services.webSiteDevelopment.addons.map((addOn, index) => {
+              return (
+                <ServiceCard.List.AddonListItem key={index}>
+                  {addOn.name}
+                  <span className="text-neutrals-400">|</span> ${addOn.price}
+                </ServiceCard.List.AddonListItem>
+              );
+            })}
           </ServiceCard.List>
         </div>
         <ServiceCard.Notice>
-          * eLorem ipsum dolor sit amet, consectetur adipiscing
+          * {services.webSiteDevelopment.notice}
         </ServiceCard.Notice>
         <ServiceCard.CallToAction />
       </ServiceCard>
+
+      {/** shopify */}
       <ServiceCard
         parentMousePositionX={mousePositionX}
         parentMousePositionY={mousePositionY}
         className="lg:col-span-3"
       >
         <div>
-          <ServiceCard.Title>Shopify theme</ServiceCard.Title>
+          <ServiceCard.Title>{services.shopify.serviceTitle}</ServiceCard.Title>
           <ServiceCard.Price>
-            $2300<span className="text-xl font-normal">*</span>
+            ${services.shopify.servicePrice}
+            <span className="text-xl font-normal">*</span>
           </ServiceCard.Price>
           <ServiceCard.Description>
-            Lorem ipsum dolor sit&apos;s Lorem ipsum dolor sit amet, consectetur adipiscing
-            your products.
+            {services.shopify.serviceDescription}
           </ServiceCard.Description>
           <ServiceCard.List>
-            <ServiceCard.List.BenefitListItem>
-              dolor sit amet, consectetur adipiscing
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              dolor sit amet, consectetur adipiscing
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              dolor sit amet, consectetur adipiscing
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Lorem ipsum dolor sit amet, consectetur
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Lorem ipsum dolor sit amet
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.BenefitListItem>
-              Lorem ipsum dolor sit amet, consectetur
-            </ServiceCard.List.BenefitListItem>
-            <ServiceCard.List.AddonListItem>
-              Lorem ipsum dolor sit amet, consectetur <span className="text-neutrals-400">|</span> $500
-            </ServiceCard.List.AddonListItem>
-            <ServiceCard.List.AddonListItem>
-              Lorem ipsum dolor sit <span className="text-neutrals-400">|</span> $850
-            </ServiceCard.List.AddonListItem>
-            <ServiceCard.List.AddonListItem>
-              adipiscing <span className="text-neutrals-400">|</span> $250
-            </ServiceCard.List.AddonListItem>
+            {services.shopify.serviceBenefits.map((benifits, index) => {
+              return (
+                <ServiceCard.List.BenefitListItem key={index}>
+                  {benifits}
+                </ServiceCard.List.BenefitListItem>
+              );
+            })}
+
+            {services.shopify.addons.map((addOn, index) => {
+              return (
+                <ServiceCard.List.AddonListItem key={index}>
+                  {addOn.name}
+                  <span className="text-neutrals-400">|</span> ${addOn.price}
+                </ServiceCard.List.AddonListItem>
+              );
+            })}
           </ServiceCard.List>
-          <ServiceCard.Notice>
-            * eLorem ipsum dolor sit amet, consectetur adipiscing project scope
-          </ServiceCard.Notice>
+          <ServiceCard.Notice>* {services.shopify.notice}</ServiceCard.Notice>
         </div>
         <ServiceCard.CallToAction />
         <svg
@@ -169,10 +142,7 @@ function ServiceGrid() {
         >
           <defs>
             <filter id="glow">
-              <feGaussianBlur
-                stdDeviation="2.5"
-                result="coloredBlur"
-              />
+              <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
               <feMerge>
                 <feMergeNode in="coloredBlur" />
                 <feMergeNode in="SourceGraphic" />
@@ -186,7 +156,7 @@ function ServiceGrid() {
               animate={{ pathLength: [0, 1, 1], opacity: [1, 1, 0] }}
               transition={{
                 repeat: Infinity,
-                repeatType: 'loop',
+                repeatType: "loop",
                 duration: 8,
                 repeatDelay: 1,
               }}
@@ -203,7 +173,7 @@ function ServiceGrid() {
               animate={{ opacity: [0, 1, 0] }}
               transition={{
                 repeat: Infinity,
-                repeatType: 'loop',
+                repeatType: "loop",
                 repeatDelay: 5,
                 duration: 4,
                 delay: 1.5,
@@ -214,21 +184,20 @@ function ServiceGrid() {
           </g>
         </svg>
       </ServiceCard>
+
+      {/** custom */}
       <ServiceCard
         parentMousePositionX={mousePositionX}
         parentMousePositionY={mousePositionY}
         className="lg:col-span-2"
       >
         <div>
-          <ServiceCard.Title>Custom</ServiceCard.Title>
-          <ServiceCard.Price>Individual price</ServiceCard.Price>
+          <ServiceCard.Title>{services.custom.serviceTitle}</ServiceCard.Title>
+          <ServiceCard.Price>{services.custom.servicePrice}</ServiceCard.Price>
           <ServiceCard.Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in purus mollis, gravida dui imperdiet, tincidunt augue.
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in
+            {services.custom.serviceDescription}
             <br />
             <br />
-            <span className="text-neutrals-100">posuere vestibulum ex. Etiam pulvinar ege!</span>
           </ServiceCard.Description>
         </div>
         <ServiceCard.CallToAction />
