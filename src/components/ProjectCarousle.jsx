@@ -206,7 +206,7 @@ function ProjectCarousel({ projects }) {
   const portfolioData = useContext(PortfolioContext);
   const categories = portfolioData && portfolioData.categories ? portfolioData.categories.filter(category => category.enabled) : [];
   const projectTagFilters = categories.map(category => category.name);
-  const wildcardFilter = 'Web Development';
+  // const wildcardFilter = 'Web Development';
   const [selectedFilters, setSelectedFilters] = useState(['Web Development']);
   const updateCarouselConstraints = useCallback(() => {
     if (
@@ -299,18 +299,27 @@ function ProjectCarousel({ projects }) {
     [dragStart, isDragging],
   );
 
-  const filteredProjects = projects.filter((project) => {
-    const projectCategories = Array.isArray(project.category_id) ? project.category_id : [project.category_id];
-    const isAnyProjectTagFiltered = selectedFilters.some((selectedFilter) =>
-      projectCategories.includes(selectedFilter)
-    );
-    if (isAnyProjectTagFiltered) return true;
+  // const filteredProjects = projects.filter((project) => {
+  //   const projectCategories = Array.isArray(project.category_id) ? project.category_id : [project.category_id];
+  //   const isAnyProjectTagFiltered = selectedFilters.some((selectedFilter) =>
+  //     projectCategories.includes(selectedFilter)
+  //   );
+  //   if (isAnyProjectTagFiltered) return true;
   
-    const isWildcardFilterEnabledAndNoProjectTagFiltered =
-      selectedFilters.includes(wildcardFilter) &&
-      !projectCategories.some((projectTag) => projectTagFilters.includes(projectTag));
-    return isWildcardFilterEnabledAndNoProjectTagFiltered;
-  });  
+  //   const isWildcardFilterEnabledAndNoProjectTagFiltered =
+  //     selectedFilters.includes(wildcardFilter) &&
+  //     !projectCategories.some((projectTag) => projectTagFilters.includes(projectTag));
+  //   return isWildcardFilterEnabledAndNoProjectTagFiltered;
+  // });  
+
+
+  const categoryIds = selectedFilters.map(filter => {
+    const category = categories.find(cat => cat.name === filter);
+    return category ? category.id : null;
+});
+
+const filteredProjects = projects.filter(project => categoryIds.includes(project.category_id));
+
 
   return (
     <div
