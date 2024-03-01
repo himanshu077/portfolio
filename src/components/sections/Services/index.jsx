@@ -6,7 +6,7 @@ import ServiceGrid from "../../ServiceGrid";
 import { PortfolioContext } from "../../../context/protfolioContext";
 
 const Services = () => {
-    const projectData = useContext(PortfolioContext);
+  const projectData = useContext(PortfolioContext);
   return (
     <Section
       id="services"
@@ -17,15 +17,14 @@ const Services = () => {
       <Container>
         <div className="mb-16 flex flex-col items-center text-center">
           <Caption id="services-heading">Services</Caption>
-          <Heading>
-            Lorem Ispum Dolor, <br className="lg:hidden" />
-            condimentum massa
-          </Heading>
+          <Heading>Elevate Your Digital Presence</Heading>
           <Paragraph>
-            Secure your seat, egestas condimentum massa, id finibus quam porta
-            nec.{" "}
+            Welcome to our services! We offer tailored solutions to elevate your
+            online presence. Trust our dedicated team to exceed your
+            expectations and help you achieve your digital goals with
+            confidence.
             <span className="text-neutrals-100">
-              egestas condimentum massa, id finibus quam porta nec.{" "}
+              With our expertise, expect results beyond your expectations.
             </span>
           </Paragraph>
         </div>
