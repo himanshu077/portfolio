@@ -42,6 +42,7 @@ function MobileNavigation({ isOpen, onClose, links }) {
                                     className={cn(
                                         'py-4 ps-2 uppercase text-neutrals-200 transition-[letter-spacing,color]',
                                         'hover:tracking-wider hover:text-neutrals-50 focus-visible:tracking-wider focus-visible:text-neutrals-50',
+                                        !link.enable && "hidden"
                                     )}
                                 >
                                     {link.label}

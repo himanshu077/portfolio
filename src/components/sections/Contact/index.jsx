@@ -1,8 +1,8 @@
-import React from 'react';
-import Section from '../../ui/section';
-import Container from '../../ui/container';
-import { Caption, Heading, Paragraph } from '../../ui/typography';
-import ContactForm from '../../ContactForm';
+import React from "react";
+import Section from "../../ui/section";
+import Container from "../../ui/container";
+import { Caption, Heading, Paragraph } from "../../ui/typography";
+import ContactForm from "../../ContactForm";
 
 const Contact = () => {
   return (
@@ -19,9 +19,9 @@ const Contact = () => {
             <Caption id="contact-heading">Contact</Caption>
             <Heading>Got a problem to solve?</Heading>
             <Paragraph>
-            Lorem Ispum Dolor sit amet, consectetur adipiscing elit. Praesent egestas condimentum massa, <span
-                className="text-neutrals-100">your dream website</span>
-              .
+              Ready to bring your vision to life? Let's collaborate to craft
+              your dream website, enhance your digital presence, or create
+              captivating content. Reach out today to get started!
             </Paragraph>
           </div>
           <div className="mt-10 basis-full lg:ms-10 lg:mt-0 xl:ms-20">
@@ -31,6 +31,6 @@ const Contact = () => {
       </Container>
     </Section>
   );
-}
+};
 
 export default Contact;

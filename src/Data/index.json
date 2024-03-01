@@ -94,6 +94,14 @@
         ],
         "description": "I'm a passionate designer and developer who loves to create beautiful and functional websites and applications. I have a strong eye for detail and a keen understanding of user experience. I'm always looking to learn and improve my skills and abilities."
       }
+    },
+    "enable_section":{
+      "about":true,
+      "services":true,
+      "work":true, 
+      "sourceCode":true,
+      "customerStories":true,
+      "contact":true
     }
   },
   "testimonials": [
