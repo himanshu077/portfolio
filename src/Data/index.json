@@ -98,7 +98,7 @@
     },
     "enable_section": {
       "about": true,
-      "services": true,
+      "services": false,
       "work": true,
       "sourceCode": true,
       "customerStories": true,
