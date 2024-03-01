@@ -192,7 +192,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/9aff6252a30d1b08e6b9e143f111b907c3b8a3b4/src/assets/Images/BIDMI.png",
+        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/data-fetching/src/assets/Images/BIDMI.png",
         "alt": ""
       },
       "image_gallery": [
@@ -214,7 +214,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://assets.gqindia.com/photos/608bfcdc2c7bfc93e2031ab5/master/w_200h-200,c_limit/wallet-app.jpg",
+        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/data-fetching/src/assets/Images/expenseCalculator.png",
         "alt": ""
       },
       "image_gallery": [
@@ -236,7 +236,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/9aff6252a30d1b08e6b9e143f111b907c3b8a3b4/src/assets/Images/BMI.png",
+        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/data-fetching/src/assets/Images/BMI.png",
         "alt": ""
       },
       "image_gallery": [
@@ -324,7 +324,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/9aff6252a30d1b08e6b9e143f111b907c3b8a3b4/src/assets/Images/BMI.png",
+        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/data-fetching/src/assets/Images/ShortenUrl.png",
         "alt": ""
       },
       "image_gallery": [
