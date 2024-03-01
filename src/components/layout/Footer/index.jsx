@@ -99,7 +99,7 @@ function Footer() {
     {
       label: 'Services',
       href: '/#services',
-      enable:profileData?.website?.enable_section.customerStories
+      enable:profileData?.website?.enable_section.service
     },
     {
       label: 'Blog',

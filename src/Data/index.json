@@ -97,12 +97,12 @@
     },
     "enable_section": {
       "about": true,
-      "services": true,
+      "services": false,
       "work": true,
       "sourceCode": true,
       "customerStories": true,
       "contact": true,
-      "blogs": true
+      "blogs": false
     }
   },
   "testimonials": [
