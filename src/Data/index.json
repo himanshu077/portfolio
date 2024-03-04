@@ -150,6 +150,12 @@
   ],
   "categories": [
     {
+      "id": "0",
+      "name": "All",
+      "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
+      "enabled": true
+    },
+    {
       "id": "1",
       "name": "Web Development",
       "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",

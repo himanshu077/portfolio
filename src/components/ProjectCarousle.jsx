@@ -134,7 +134,15 @@ function ProjectFiltersSelect({ selectedFiltersState, projectTagFilters }) {
       as="div"
       value={selectedFilters}
       onChange={(newSelectedFilters) => {
-        if (newSelectedFilters.length !== 0) setSelectedFilters(newSelectedFilters);
+        if (newSelectedFilters.length !== 0) {
+          if (newSelectedFilters[newSelectedFilters.length - 1] === "All") {
+            setSelectedFilters(["All"]);
+          } else if (selectedFilters.includes("All")) {
+            setSelectedFilters([newSelectedFilters[newSelectedFilters.length - 1]]); 
+          } else {
+            setSelectedFilters(newSelectedFilters);
+          }
+        }
       }}
       multiple
       className="group relative min-w-[20rem]"
@@ -143,9 +151,12 @@ function ProjectFiltersSelect({ selectedFiltersState, projectTagFilters }) {
         <>
           <Listbox.Button className="flex w-full items-center justify-between rounded-sm border border-neutrals-600 bg-radial-highlight px-4 py-2 text-sm text-neutrals-100">
             {(selectedFilters ?? [])
-              .sort((a, b) => projectTagFilters.indexOf(a) - projectTagFilters.indexOf(b))
+              .sort(
+                (a, b) =>
+                  projectTagFilters.indexOf(a) - projectTagFilters.indexOf(b)
+              )
               .map((selectedFilter) => selectedFilter)
-              .join(', ')}
+              .join(", ")}
             <Icons.ChevronDown
               aria-hidden
               className="size-4 transition-transform duration-200 group-data-[headlessui-state='open']:-scale-y-100"
@@ -171,9 +182,11 @@ function ProjectFiltersSelect({ selectedFiltersState, projectTagFilters }) {
                     {({ active, selected }) => (
                       <li
                         className={cx(
-                          'cursor-pointer rounded-sm p-2 text-sm transition-all',
-                          selected && !active ? 'text-neutrals-50' : '',
-                          active ? 'bg-primary text-neutrals-50' : 'text-neutrals-300',
+                          "cursor-pointer rounded-sm p-2 text-sm transition-all",
+                          selected && !active ? "text-neutrals-50" : "",
+                          active
+                            ? "bg-primary text-neutrals-50"
+                            : "text-neutrals-300"
                         )}
                       >
                         {projectTagFilter}
@@ -207,7 +220,7 @@ function ProjectCarousel({ projects }) {
   const categories = portfolioData && portfolioData.categories ? portfolioData.categories.filter(category => category.enabled) : [];
   const projectTagFilters = categories.map(category => category.name);
   // const wildcardFilter = 'Web Development';
-  const [selectedFilters, setSelectedFilters] = useState(['Web Development']);
+  const [selectedFilters, setSelectedFilters] = useState(['All']);
   const updateCarouselConstraints = useCallback(() => {
     if (
       !carouselWrapperRef.current ||
@@ -318,7 +331,12 @@ function ProjectCarousel({ projects }) {
     return category ? category.id : null;
 });
 
-const filteredProjects = projects.filter(project => categoryIds.includes(project.category_id));
+
+console.log(selectedFilters, "sf")
+
+const filteredProjects = selectedFilters.includes("All")
+  ? projects
+  : projects.filter((project) => categoryIds.includes(project.category_id));
 
 
   return (
