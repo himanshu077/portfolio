@@ -102,7 +102,8 @@
       "work": true,
       "sourceCode": true,
       "customerStories": true,
-      "contact": true
+      "contact": true,
+      "blogs": false
     }
   },
   "testimonials": [
@@ -192,7 +193,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://assets-global.website-files.com/60048f7343094628c841c251/654e532bbf941aa39c5d3dc4_6544faaa2d192f0b9a7194e8_home_page_hero_1200x800.webp",
+        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/data-fetching/src/assets/Images/BIDMI.png",
         "alt": ""
       },
       "image_gallery": [
@@ -214,7 +215,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://assets.gqindia.com/photos/608bfcdc2c7bfc93e2031ab5/master/w_200h-200,c_limit/wallet-app.jpg",
+        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/data-fetching/src/assets/Images/expenseCalculator.png",
         "alt": ""
       },
       "image_gallery": [
@@ -236,7 +237,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/22/e2/08/22e208f5-6a72-a1f7-a92e-7eb851e19893/d7c8ffd0-dd6a-4a01-90e7-d46a1e285a88_Screen3.png/200x0w.jpg",
+        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/data-fetching/src/assets/Images/BMI.png",
         "alt": ""
       },
       "image_gallery": [
@@ -249,7 +250,7 @@
     {
       "id": "4",
       "category_id": "5",
-      "enabled": true,
+      "enabled": false,
       "name": "Angular Chat",
       "description": "This is a real-time chat application built using Angular for the frontend, with a Node.js backend using Socket.io for WebSocket communication. The app allows users to join different chat rooms, exchange messages, and engage in conversations seamlessly.",
       "project_link": "https://github.com/himanshu077/Angular-Chat",
@@ -271,7 +272,7 @@
     {
       "id": "5",
       "category_id": "5",
-      "enabled": true,
+      "enabled": false,
       "name": "Angular Postman",
       "description": "Angular Postman is a purpose-built project for efficient API testing, utilizing Angular CLI.",
       "project_link": "https://github.com/himanshu077/Angular-Postman",
@@ -293,7 +294,7 @@
     {
       "id": "6",
       "category_id": "2",
-      "enabled": true,
+      "enabled": false,
       "name": "Quiz Flutter",
       "description": "Quiz app is a mobile application that allows users to take quizzes on various topics and subjects. The app is built using Flutter, and it is designed to be user-friendly and intuitive.",
       "project_link": "https://github.com/himanshu077/Quiz-Flutter",
@@ -324,7 +325,7 @@
       "date": "2020-01-01",
       "poster": {
         "id": "123",
-        "src": "https://easydmarc.com/blog/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/06/URL-Shorteners_-Pros-and-Cons.jpg.webp",
+        "src": "https://raw.githubusercontent.com/himanshu077/portfolio/data-fetching/src/assets/Images/ShortenUrl.png",
         "alt": ""
       },
       "image_gallery": [
@@ -339,7 +340,7 @@
       "name": "React Monorepo",
       "tags": "Website",
       "image": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg",
-      "enabled": true
+      "enabled": false
     }
   ],
   "socials": {
@@ -460,5 +461,14 @@
       "servicePrice": "Individual price",
       "serviceDescription": "Our custom service offers tailor-made solutions crafted specifically to meet your unique requirements. We prioritize understanding your needs and delivering bespoke solutions that exceed your expectations. Whether you're looking to build from scratch or enhance existing functionalities, our team is here to bring your vision to life."
     }
-  }
+  },
+  "blogPosts": [
+    {
+      "slug": { "current": "Web Site Development" },
+      "poster": "../assets/Images/blog-poster.webp",
+      "title": "Website Development in React JS",
+      "excerpt": " React follows a component-based architecture where UIs are built using reusable components. This makes the code modular, easier to understand, maintain, and scale.",
+      "date": "01 March 2024"
+    }
+  ]
 }

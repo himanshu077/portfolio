@@ -53,33 +53,17 @@ function ContactForm() {
   //     console.log(error);
   //   }
   // }
-  // const handleSubmitEmail = async(data) => {
-  //   console.log(data, "data");
-  //   let url =
-  //     "https://my9h84b2f9.execute-api.ap-south-1.amazonaws.com/corsHeaderAllowed/sendMail";
-  //   const payload = {
-  //     email: data.email,
-  //     body: data.message,
-  //     subject: "hello mail, from Contact , Portfolio website",
-  //   };
-  //   try {
-  //     const response = await axios.post(url, payload);
-  //     console.log(response, "response");
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
 
     const handleSubmitEmail = async (data) => {
       const payload = {
-        email: "mohit2.netweb@gmail.com",
+        email: data.email,
         subject: data.message,
         body: "hello mail, from Contact , Portfolio website",
       };
 
       try {
         const response = await fetch(
-          "https://my9h84b2f9.execute-api.ap-south-1.amazonaws.com/default/sendMail",
+          "https://op98xubff1.execute-api.ap-south-1.amazonaws.com/default/sendmail",
           {
             method: "POST",
             mode: "no-cors",
@@ -89,6 +73,8 @@ function ContactForm() {
             body: JSON.stringify(payload),
           }
         );
+
+        console.log(response, "response")
         if (!response.ok) {
           setIsSubmitSuccessful(true);
           reset();
