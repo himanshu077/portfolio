@@ -11,6 +11,7 @@ import { useForm } from 'react-hook-form';
 import { contactSubmissionSchema } from '../lib/validations/contact-submission';
 import { useContext ,useState} from 'react';
 import { PortfolioContext } from '../context/protfolioContext';
+import axios from 'axios';
 
 function ContactForm() {
   const portfolioData = useContext(PortfolioContext);
@@ -60,24 +61,16 @@ function ContactForm() {
         subject: data.message,
         body: "hello mail, from Contact , Portfolio website",
       };
-
       try {
-        const response = await fetch(
-          "https://op98xubff1.execute-api.ap-south-1.amazonaws.com/default/sendmail",
-          {
-            method: "POST",
-            mode: "no-cors",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-          }
+        const response = await axios.post(
+          "https://p65drtxuxja4jbiupmsjzjugja0ylitp.lambda-url.ap-south-1.on.aws",
+          payload
         );
-
-        console.log(response, "response")
-        if (!response.ok) {
+        if (response.data.statusCode === 200) {
           setIsSubmitSuccessful(true);
           reset();
+        } else {
+          setIsSubmitSuccessful(false);
         }
       } catch (error) {
         setIsSubmitSuccessful(false);

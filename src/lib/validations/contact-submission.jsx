@@ -24,4 +24,5 @@ export const contactSubmissionSchema = z.object({
       { message: "Phone Number must be exactly 10 digits!" }
     )
     .optional(),
+  message: z.string().optional(),
 });
