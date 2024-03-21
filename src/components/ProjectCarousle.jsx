@@ -128,6 +128,7 @@ function ProjectSlide({
 
 function ProjectFiltersSelect({ selectedFiltersState, projectTagFilters }) {
   const [selectedFilters, setSelectedFilters] = selectedFiltersState;
+  const [isOpen,setIsOpen]=useState(false);
 
   return (
     <Listbox
@@ -138,18 +139,24 @@ function ProjectFiltersSelect({ selectedFiltersState, projectTagFilters }) {
           if (newSelectedFilters[newSelectedFilters.length - 1] === "All") {
             setSelectedFilters(["All"]);
           } else if (selectedFilters.includes("All")) {
-            setSelectedFilters([newSelectedFilters[newSelectedFilters.length - 1]]); 
+            setSelectedFilters([
+              newSelectedFilters[newSelectedFilters.length - 1],
+            ]);
           } else {
             setSelectedFilters(newSelectedFilters);
           }
         }
+        setIsOpen(false);
       }}
       multiple
       className="group relative min-w-[20rem]"
     >
-      {({ open }) => (
+      {() => (
         <>
-          <Listbox.Button className="flex w-full items-center justify-between rounded-sm border border-neutrals-600 bg-radial-highlight px-4 py-2 text-sm text-neutrals-100">
+          <Listbox.Button
+            className="flex w-full items-center justify-between rounded-sm border border-neutrals-600 bg-radial-highlight px-4 py-2 text-sm text-neutrals-100"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             {(selectedFilters ?? [])
               .sort(
                 (a, b) =>
@@ -163,7 +170,7 @@ function ProjectFiltersSelect({ selectedFiltersState, projectTagFilters }) {
             />
           </Listbox.Button>
           <AnimatePresence>
-            {open && (
+            {isOpen && (
               <Listbox.Options
                 static
                 as={motion.ul}
@@ -330,9 +337,6 @@ function ProjectCarousel({ projects }) {
     const category = categories.find(cat => cat.name === filter);
     return category ? category.id : null;
 });
-
-
-console.log(selectedFilters, "sf")
 
 const filteredProjects = selectedFilters.includes("All")
   ? projects
